@@ -1,37 +1,42 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
-    background: rgb(243, 243, 243);
+  background: rgb(243, 243, 243);
 }
 
 hr {
-    border: none;
-    border-top: 1px solid rgb(65, 65, 65);
-    width: 90%;
+  border: none;
+  border-top: 1px solid rgb(65, 65, 65);
+  width: 90%;
 }
 
 .charcoal {
-    background: rgb(32, 32, 32);
+  background: rgb(32, 32, 32);
 }
 
 .off-white {
-    background:rgb(230, 226, 226);
+  background: rgb(230, 226, 226);
 }
 
 .segment {
-    border-radius: 5px;
-    width: fit-content;
-    height: fit-content;
-    margin: .5rem;
-    text-align: center
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  margin: 0.5rem;
+  text-align: center;
 }
 
 .light-shadow {
-    box-shadow: 5px 5px 15px;
+  box-shadow: 5px 5px 15px;
 }
 
 .med-shadow {
-    box-shadow: 5px 5px 5px;
+  box-shadow: 5px 5px 5px;
 }
 
 .heavy-shadow {
-    box-shadow: 5px 5px 0px;
+  box-shadow: 5px 5px 0px;
 }
