@@ -1,23 +1,26 @@
 import "./App.css";
-import Buttons from "./Components/Buttons/Buttons";
-import Forms from "./Components/Forms/Forms";
-import Segments from "./Components/Segments/Segments";
-import SimpleModal from "./Components/Modal/SimpleModal/SimpleModal";
-import TopSegment from "./Components/Segments/TopSegment";
-import MiddleSegment from "./Components/Segments/MiddleSegment";
-import BottomSegment from "./Components/Segments/BottomSegment";
+import NavbarSimple from "./Components/NavbarSimple"
+import ModalSimple from "./Components/ModalSimple"
+import Buttons from "./Components/Buttons"
+import Forms from "./Components/Forms"
+import Segments from "./Components/Segments"
+import SegmentTop from "./Components/SegmentTop"
+import SegmentMiddle from "./Components/SegmentMiddle"
+import SegmentBottom from "./Components/SegmentBottom"
+
 
 function App() {
   return (
     <div className="App">
-      <SimpleModal />
+      <NavbarSimple /><br />
+      <ModalSimple />
       <Buttons />
       <Forms />
       <Segments />
       <div className="tmb-segment">
-      <TopSegment />
-      <MiddleSegment />
-      <BottomSegment />
+      <SegmentTop />
+      <SegmentMiddle />
+      <SegmentBottom />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./simple-modal.css";
+import "./modal-simple.css";
 
 function SimpleModal() {
   const [shown, setShown] = useState(false);
@@ -19,7 +19,7 @@ function SimpleModal() {
       </button>
 
       {shown === true ? (
-        <div className="">
+        
           <div className="overlay">
             <div className="simple-modal segment">
               <header>
@@ -42,7 +42,7 @@ function SimpleModal() {
               </h1>
             </div>
           </div>
-        </div>
+        
       ) : null}
     </>
   );

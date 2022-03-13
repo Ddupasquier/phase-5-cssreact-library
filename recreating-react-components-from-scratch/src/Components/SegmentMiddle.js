@@ -1,5 +1,5 @@
 import React from "react";
-import "./middle-segment.css";
+import "./segment-middle.css";
 
 function MiddleSegment() {
   return (

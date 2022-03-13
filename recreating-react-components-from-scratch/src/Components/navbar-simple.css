@@ -1,0 +1,73 @@
+.simple-navbar {
+  height: 10vh;
+  margin: 0;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  float: left;
+  margin-left: 5%;
+  align-items: stretch;
+}
+
+.logo-text {
+  position: relative;
+  vertical-align: middle;
+  user-select: none;
+  line-height: 3;
+  height: 100%;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+}
+
+.navbar-buttons {
+  display: flex;
+  float: right;
+  width: fit-content;
+  height: 100%;
+}
+
+.nav-button1 {
+  border: none;
+  background: rgb(105, 237, 255);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.nav-button1:hover {
+  background: rgb(73, 234, 255);
+}
+
+.nav-button1:active {
+  background: rgb(105, 237, 255);
+}
+
+.nav-button2 {
+  background: rgb(77, 77, 77);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.nav-button2:hover {
+  background: rgb(88,88,88);
+}
+
+.nav-button2:active {
+  background: rgb(77,77,77);
+}
+
+.side-menu-cont {
+  display: flex;
+  position: absolute;
+  height: 10vh;
+  width: 3rem;
+  z-index: 10;
+  font-size: 3rem;
+  cursor: pointer;
+}

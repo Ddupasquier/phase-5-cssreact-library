@@ -1,5 +1,5 @@
 import React from "react";
-import "./top-segment.css";
+import "./segment-top.css";
 
 function TopSegment() {
   return (

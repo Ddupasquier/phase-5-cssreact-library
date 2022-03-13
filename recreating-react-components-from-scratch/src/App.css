@@ -1,10 +1,12 @@
-html {
-  min-height: 100%;
-  position: relative;
+html, body {
+  margin: 0
 }
 
 body {
-  background: rgb(243, 243, 243);
+  background: rgb(208, 238, 227);
+  padding: 0;
+  padding-bottom: 5vh;
+  
 }
 
 hr {
@@ -30,6 +32,13 @@ hr {
 }
 
 .tmb-segment {
-  width: 80%;
+  width: 45rem;
   margin: auto;
 }
+
+.button-segment {
+  width: 45rem;
+  text-align: center;
+  margin: auto;
+}
+
