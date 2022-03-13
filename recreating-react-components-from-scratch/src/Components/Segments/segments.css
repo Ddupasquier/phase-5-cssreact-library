@@ -1,0 +1,15 @@
+.charcoal {
+  background: rgb(32, 32, 32);
+}
+
+.off-white {
+  background: rgb(230, 226, 226);
+}
+
+.segment {
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  margin: 0.5rem;
+  text-align: center;
+}
