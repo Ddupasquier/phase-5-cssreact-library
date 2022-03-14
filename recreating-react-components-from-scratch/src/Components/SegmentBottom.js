@@ -3,7 +3,7 @@ import "./segment-bottom.css";
 
 function BottomSegment() {
   return (
-    <div className="bottom-segment off-white">
+    <div className="bottom-segment light-grey">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Nisi scelerisque eu
       ultrices vitae auctor eu. Viverra maecenas accumsan lacus vel facilisis

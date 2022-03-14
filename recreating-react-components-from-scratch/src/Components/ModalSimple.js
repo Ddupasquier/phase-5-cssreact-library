@@ -13,7 +13,7 @@ function SimpleModal() {
   }
 
   return (
-    <>
+    <div className="modals-container">
       <button className="btn5" onClick={handleOpen}>
         'Simple Modal' Button
       </button>
@@ -44,7 +44,7 @@ function SimpleModal() {
           </div>
         
       ) : null}
-    </>
+    </div>
   );
 }
 

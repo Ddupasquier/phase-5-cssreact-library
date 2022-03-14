@@ -1,27 +1,28 @@
 import "./App.css";
-import NavbarSimple from "./Components/NavbarSimple"
-import ModalSimple from "./Components/ModalSimple"
-import Buttons from "./Components/Buttons"
-import Forms from "./Components/Forms"
-import Segments from "./Components/Segments"
-import SegmentTop from "./Components/SegmentTop"
-import SegmentMiddle from "./Components/SegmentMiddle"
-import SegmentBottom from "./Components/SegmentBottom"
+import { Route, Routes } from "react-router-dom";
+import NavbarSimple from "./Components/NavbarSimple";
+import ModalSimple from "./Components/ModalSimple";
+import Buttons from "./Components/Buttons";
+import Forms from "./Components/Forms";
+import Segments from "./Components/Segments";
+import Footer from "./Components/Footer";
 
 
 function App() {
   return (
     <div className="App">
-      <NavbarSimple /><br />
-      <ModalSimple />
-      <Buttons />
-      <Forms />
-      <Segments />
-      <div className="tmb-segment">
-      <SegmentTop />
-      <SegmentMiddle />
-      <SegmentBottom />
-      </div>
+      <NavbarSimple />
+      <br />
+      <Routes>
+        <Route path="/" element="" />
+        <Route path="/modals" element={<ModalSimple />} />
+        <Route path="/buttons" element={<Buttons />} />
+        <Route path="/forms" element={<Forms />} />
+        <Route path="/segments" element={<Segments />} />
+        <Route path="/navs" element={<Segments />} />
+      </Routes>
+      <br />
+      <Footer />
     </div>
   );
 }

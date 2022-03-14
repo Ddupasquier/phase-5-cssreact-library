@@ -8,7 +8,7 @@ function handleChange(e) {
 function Forms() {
   return (
     <>
-      <div className="segment form-segment charcoal">
+      <div className="form-container charcoal">
         <form onSubmit={handleChange}>
           <input
             type="text"

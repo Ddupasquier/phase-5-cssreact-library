@@ -1,5 +1,6 @@
 html, body {
-  margin: 0
+  margin: 0;
+  height: 100%
 }
 
 body {
@@ -7,6 +8,11 @@ body {
   padding: 0;
   padding-bottom: 5vh;
   
+}
+
+footer {
+  text-align: right;
+  background: rgba(255, 255, 255, 0.356);
 }
 
 hr {
@@ -31,14 +37,27 @@ hr {
   color: white;
 }
 
-.tmb-segment {
-  width: 45rem;
-  margin: auto;
-}
-
 .button-segment {
   width: 45rem;
   text-align: center;
   margin: auto;
+  margin-top: 10vh;
 }
 
+.modals-container {
+  border: 1px red solid;
+  width: 95%;
+  height: 45rem;
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  overflow: auto;
+}
+
+.form-container {
+  width: fit-content;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10vh;
+  padding: 2%;
+}

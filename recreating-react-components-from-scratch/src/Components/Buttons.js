@@ -2,22 +2,22 @@ import React from "react";
 import "./buttons.css";
 
 function Buttons() {
-  return (
+return (
     <>
       <div className="button-segment">
         <button className="button btn1">Simple No CSS Button (b1)</button>
-        <br />
+        <hr />
         <button className="button btn2">BIGREDBUTTON (b2)</button>
-        <br />
+        <hr />
         <button className="button btn3">Classy Blue (b3)</button>
         <button className="button btn4">Classy Grey (b4)</button>
         <button className="button btn5">Classy Black (b5)</button>
-        <br />
+        <hr />
         <button className="button btn6">Classy Blue w/focus (b6)</button>
         <button className="button btn7">Classy Grey w/focus (b7)</button>
         <button className="button btn8">Classy Black w/focus (b8)</button>
         <br />
-        <div className="off-white top-segment">
+        <div className="light-grey top-segment">
           <button className="button btn9">Button (b9)</button>
           <button className="button btn10">Button (b10)</button>
           <button className="button btn11">Button (b11)</button>
