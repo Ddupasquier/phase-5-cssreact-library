@@ -1,5 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import Home from "./Components/Home";
 import NavbarSimple from "./Components/NavbarSimple";
 import ModalSimple from "./Components/ModalSimple";
 import Buttons from "./Components/Buttons";
@@ -14,7 +15,7 @@ function App() {
       <NavbarSimple />
       <br />
       <Routes>
-        <Route path="/" element="" />
+        <Route path="/" element={<Home />} />
         <Route path="/modals" element={<ModalSimple />} />
         <Route path="/buttons" element={<Buttons />} />
         <Route path="/forms" element={<Forms />} />

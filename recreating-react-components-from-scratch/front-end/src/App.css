@@ -21,20 +21,9 @@ hr {
   width: 90%;
 }
 
-.light-shadow {
-  box-shadow: 5px 5px 15px;
-}
-
-.med-shadow {
-  box-shadow: 5px 5px 5px;
-}
-
-.heavy-shadow {
-  box-shadow: 5px 5px 0px;
-}
-
-.light-font {
-  color: white;
+.home-page-container {
+  background: grey;
+  margin-top: 15vh;
 }
 
 .button-segment {
@@ -61,3 +50,20 @@ hr {
   margin-top: 10vh;
   padding: 2%;
 }
+
+.light-shadow {
+  box-shadow: 5px 5px 15px;
+}
+
+.med-shadow {
+  box-shadow: 5px 5px 5px;
+}
+
+.heavy-shadow {
+  box-shadow: 5px 5px 0px;
+}
+
+.light-font {
+  color: white;
+}
+

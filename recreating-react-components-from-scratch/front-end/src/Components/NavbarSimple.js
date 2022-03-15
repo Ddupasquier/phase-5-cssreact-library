@@ -20,10 +20,10 @@ function SimpleNavbar() {
           <span className="logo-text">Simple NavBar</span>
         </div>
         <div className="navbar-buttons">
-          <button className="nav-button2">Home</button>
-          <button className="nav-button1">About</button>
-          <button className="nav-button2">Components</button>
-          <button className="nav-button1">Contact</button>
+          <Link to="/" className="nav-button2">Home</Link>
+          <Link to="/about" className="nav-button1">About</Link>
+          <Link to="/components" className="nav-button2">Components</Link>
+          <Link to="/contact" className="nav-button1">Contact</Link>
         </div>
       </div>
       {isOpen === true ? (

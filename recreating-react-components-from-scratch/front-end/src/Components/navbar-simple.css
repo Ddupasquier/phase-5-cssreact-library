@@ -28,6 +28,7 @@
 .navbar-buttons {
   display: flex;
   float: right;
+  text-decoration: none;
   width: fit-content;
   height: 100%;
 }
@@ -38,6 +39,8 @@
   border: none;
   color: white;
   font-weight: bold;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
   padding: 0.5rem 1rem 0.5rem 1rem;
   cursor: pointer;
   z-index: 20;
@@ -56,6 +59,8 @@
   border: none;
   color: white;
   font-weight: bold;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
   padding: 0.5rem 1rem 0.5rem 1rem;
   cursor: pointer;
   z-index: 20;
