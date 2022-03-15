@@ -1,0 +1,2 @@
+class UserComponentsController < ApplicationController
+end
