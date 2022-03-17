@@ -1,11 +1,31 @@
 import React, { useState } from "react";
-function LoginForm() {
+function LoginForm({ user, onLogin}) {
+  const [email, setEmail] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    })
+      .then((r) => r.json())
+      .then((user) => onLogin(user));
+  }
+
   return (
-    <form>
-      <input type="text" placeholder="Email"></input>
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      ></input>
       <input type="text" placeholder="Password"></input>
       <button type="submit" className="login-submit">
-        Login/Signup
+        Login
       </button>
     </form>
   );

@@ -7,13 +7,23 @@ import Buttons from "./Components/Buttons";
 import Forms from "./Components/Forms";
 import Segments from "./Components/Segments";
 import Footer from "./Components/Footer";
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
 
   return (
     <div className="App">
-      <NavbarSimple/>
+      <NavbarSimple user={user} setUser={setUser} />
       <br />
       <Routes>
         <Route path="/" element={<Home />} />
