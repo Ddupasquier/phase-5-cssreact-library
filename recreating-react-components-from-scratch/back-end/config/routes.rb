@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  get 'sessions/create'
+  get 'sessions/destroy'
   resources :user_components, only: [:index, :show]
   resources :user_favorites, only: [:index, :show]
   resources :comments, only: [:index, :show]
   resources :components, only: [:index, :show]
   resources :users, only: [:index, :show]
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  post "/login", to: "sessions#create"
+  get "/me", to: "users#show"
+  # delete "/logout", to: "sessions#destroy"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

@@ -1,4 +1,6 @@
 class UserComponentsController < ApplicationController
+    before_action :find_user_comp, only: [:show]
+
     def index
         user_components = UserComponent.all
         render json: user_components, status: :ok
@@ -11,7 +13,7 @@ class UserComponentsController < ApplicationController
 
     private
 
-    def find_user
+    def find_user_comp
         @user_component = UserComponent.find_by(id:params[:id])
     end
 end

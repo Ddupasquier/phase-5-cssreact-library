@@ -1,0 +1,33 @@
+.login-button {
+  color: white;
+  background: black;
+  border: none;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: grey;
+}
+
+.login-button:active {
+    background: rgb(80, 80, 80);
+}
+
+.login-button-text {
+  font-weight: bold;
+  background: none;
+  text-decoration: none;
+}
+
+.login-submit {
+  float: right;
+}
+
+form > input {
+  margin: 1%;
+  width: 92%;
+}
+
+.welcome-message {
+  color: white;
+}

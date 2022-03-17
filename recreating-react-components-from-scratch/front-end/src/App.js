@@ -7,12 +7,13 @@ import Buttons from "./Components/Buttons";
 import Forms from "./Components/Forms";
 import Segments from "./Components/Segments";
 import Footer from "./Components/Footer";
-
+// import { useState } from "react";
 
 function App() {
+
   return (
     <div className="App">
-      <NavbarSimple />
+      <NavbarSimple/>
       <br />
       <Routes>
         <Route path="/" element={<Home />} />

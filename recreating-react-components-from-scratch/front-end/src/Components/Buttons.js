@@ -5,7 +5,7 @@ function Buttons() {
 return (
     <>
       <div className="button-segment">
-        <p>Just for reference, here's a completely unstyled button. Boring, right?</p><br />
+        <p>Just for reference, here's a completely unstyled button. Boring, right?</p>
         <button className="button btn1">Simple No CSS Button (b1)</button>
         <hr />
         <button className="button btn2">BIGREDBUTTON (b2)</button>
