@@ -3,7 +3,7 @@ import "./login-logout.css";
 import LoginForm from "./LoginForm";
 
 function LoginLogout({ user, setUser}) {
-  const [LoginShown, setLoginShown] = useState(false);
+  const [loginShown, setLoginShown] = useState(false);
 
   function handleOpen() {
     setLoginShown(true);
@@ -33,15 +33,15 @@ function LoginLogout({ user, setUser}) {
 
   return (
     <>
-      <button className="login-button" onClick={handleOpen}>
+      {user !== null ? null : <button className="login-button" onClick={handleOpen}>
         <span className="login-button-text">Login</span>
-      </button>
-      <button onClick={handleLogout}>Logout</button>
+      </button>}
+      {user !== null ? <button onClick={handleLogout} className="login-button">Logout</button> : null}
 
-      {LoginShown === true ? (
+      {loginShown === true ? (
         <>
           {renderForm()}
-          <button onClick={handleClose}>X</button>
+          {user !== null ? null : <button onClick={handleClose}>X</button>}
         </>
       ) : null}
     </>
