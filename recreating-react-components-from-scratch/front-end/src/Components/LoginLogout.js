@@ -14,7 +14,7 @@ function LoginLogout({ user, setUser}) {
   }
 
   function renderForm() {
-    if (user) {
+    if (user !== null) {
       return <p className="welcome-message">Welcome, {user.first_name}!</p>;
     } else {
       return <LoginForm user={user} setUser={setUser} />;

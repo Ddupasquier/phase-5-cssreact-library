@@ -1,16 +1,17 @@
 html, body {
   margin: 0;
-  height: 100%
 }
 
 body {
   background: rgb(208, 238, 227);
   padding: 0;
   padding-bottom: 5vh;
-  
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   text-align: right;
   background: rgba(255, 255, 255, 0.356);
 }
