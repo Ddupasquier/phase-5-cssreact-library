@@ -17,7 +17,7 @@ function LoginLogout({ user, setUser}) {
     if (user !== null) {
       return <div className="welcome-container segment light-grey"><p className="welcome-message">Welcome, {user.first_name}!</p></div>;
     } else {
-      return <LoginForm user={user} setUser={setUser} />;
+      return <LoginForm user={user} setUser={setUser}  handleClose={handleClose}/>;
     }
   }
 
@@ -41,7 +41,6 @@ function LoginLogout({ user, setUser}) {
       {loginShown === true ? (
         <>
           {renderForm()}
-          {user !== null ? null : <button onClick={handleClose}>X</button>}
         </>
       ) : null}
     </>

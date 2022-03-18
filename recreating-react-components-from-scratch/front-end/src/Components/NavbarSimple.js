@@ -46,9 +46,9 @@ function SimpleNavbar({ user, setUser }) {
           <Link to="/components" className="nav-button2">
             <span className="nav-link-text">Components</span>
           </Link>
-          <Link to="/contact" className="nav-button1">
-            <span className="nav-link-text">Contact</span>
-          </Link>
+          {user !== null ? <Link to="/contact" className="nav-button1">
+            <span className="nav-link-text">Favorites</span>
+          </Link> : null}
           {user !== null && user.is_contributor === true ? <Link to="/" className="nav-button2">
             <span className="nav-link-text">Contribute</span>
           </Link>: null}

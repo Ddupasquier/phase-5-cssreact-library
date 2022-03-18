@@ -6,3 +6,8 @@ In this project I'll be recreating React components from Semantic UI, ReactBoots
 If anyone at any point has any notes on things that seem broken or better ways that I can achieve certain affects I am more than happy to hear you out. We're all learning every single day so any and all constructive input is appreciated!
 
 Just to keep things clear: I'm in no way implying that I'm better, or more talented than the people who built the components in the libraries I mentioned. I'm a novice and I'm very aware that they know what they're doing far better than I do.
+
+
+example login:
+manbearpig@aol.com
+your mom
