@@ -4,7 +4,7 @@ import * as GiIcon from "react-icons/gi";
 import { Link } from "react-router-dom";
 import LoginLogout from "./LoginLogout";
 
-function SimpleNavbar({user, setUser}) {
+function SimpleNavbar({ user, setUser }) {
   const [isOpen, setIsOpen] = useState(false);
   const myRef = useRef();
   const sidebarRef = useRef();
@@ -49,6 +49,9 @@ function SimpleNavbar({user, setUser}) {
           <Link to="/contact" className="nav-button1">
             <span className="nav-link-text">Contact</span>
           </Link>
+          {user !== null && user.is_contributor === true ? <Link to="/" className="nav-button2">
+            <span className="nav-link-text">Contribute</span>
+          </Link>: null}
         </div>
       </div>
       {isOpen === true ? (

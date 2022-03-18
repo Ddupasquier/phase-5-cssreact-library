@@ -28,6 +28,10 @@ form > input {
   width: 92%;
 }
 
+.welcome-container {
+  padding: 6%;
+}
+
 .welcome-message {
   margin-left: auto;
   margin-right: auto;
