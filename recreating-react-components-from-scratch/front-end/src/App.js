@@ -8,6 +8,9 @@ import Forms from "./Components/Forms";
 import Segments from "./Components/Segments";
 import Footer from "./Components/Footer";
 import { useState, useEffect } from "react";
+import Navs from "./Components/Navs";
+import MyProfile from "./Components/MyProfile";
+import MyProfileEdit from "./Components/MyProfileEdit";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -31,7 +34,9 @@ function App() {
         <Route path="/buttons" element={<Buttons />} />
         <Route path="/forms" element={<Forms />} />
         <Route path="/segments" element={<Segments />} />
-        <Route path="/navs" element={<Segments />} />
+        <Route path="/navs" element={<Navs />} />
+        <Route path="/my-profile/:name" element={<MyProfile user={user} />} />
+        <Route path="/edit-profile/:name" element={<MyProfileEdit user={user} setUser={setUser} />} />
       </Routes>
       <br />
       <Footer />

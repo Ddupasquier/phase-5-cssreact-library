@@ -27,6 +27,37 @@ function SimpleNavbar({ user, setUser }) {
     isOpen === false ? setIsOpen(true) : setIsOpen(false);
   }
 
+  function renderMyProfile() {
+    if (user === null) {
+      return null;
+    } else {
+      return (
+        <>
+          <hr />
+          <span className="ul-title">{user.first_name}'s Profile</span>
+          <ul>
+            <li>
+              <Link
+                to={`/my-profile/${user.first_name}${user.last_name}`}
+                className="pop-out-button"
+              >
+                View
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={`/edit-profile/${user.first_name}${user.last_name}`}
+                className="pop-out-button"
+              >
+                Edit
+              </Link>
+            </li>
+          </ul>
+        </>
+      );
+    }
+  }
+
   return (
     <>
       <div className="simple-navbar charcoal">
@@ -46,12 +77,16 @@ function SimpleNavbar({ user, setUser }) {
           <Link to="/components" className="nav-button2">
             <span className="nav-link-text">Components</span>
           </Link>
-          {user !== null ? <Link to="/contact" className="nav-button1">
-            <span className="nav-link-text">Favorites</span>
-          </Link> : null}
-          {user !== null && user.is_contributor === true ? <Link to="/" className="nav-button2">
-            <span className="nav-link-text">Contribute</span>
-          </Link>: null}
+          {user !== null ? (
+            <Link to="/contact" className="nav-button1">
+              <span className="nav-link-text">Favorites</span>
+            </Link>
+          ) : null}
+          {user !== null && user.is_contributor === true ? (
+            <Link to="/" className="nav-button2">
+              <span className="nav-link-text">Contribute</span>
+            </Link>
+          ) : null}
         </div>
       </div>
       {isOpen === true ? (
@@ -80,8 +115,8 @@ function SimpleNavbar({ user, setUser }) {
               </Link>
             </li>
             <li>
-              <Link to="/" className="pop-out-button">
-                More Stuff
+              <Link to="/navs" className="pop-out-button">
+                Navs
               </Link>
             </li>
           </ul>
@@ -89,6 +124,7 @@ function SimpleNavbar({ user, setUser }) {
           <span className="ul-title">Sources</span>
           <hr />
           <span className="ul-title">ReadMe</span>
+          {renderMyProfile()}
         </div>
       ) : null}
     </>

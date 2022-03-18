@@ -1,0 +1,28 @@
+.my-profile {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 15vh;
+    box-sizing: border-box;
+    width: 60vw;
+}
+
+.user-info > img {
+    width: 100%;
+    border-radius: none;
+}
+
+.user-info > p {
+    margin-left: 5%;
+    text-align: left;
+}
+
+.favorites {
+    padding: 2%;
+    color: white;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.contributor-container {
+    background: rgba(255, 255, 255, 0.247);
+}
