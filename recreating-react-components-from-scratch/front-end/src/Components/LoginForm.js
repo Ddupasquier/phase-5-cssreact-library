@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function LoginForm({ user, onLogin}) {
+function LoginForm({ user, setUser}) {
   const [email, setEmail] = useState("");
 
   function handleSubmit(e) {
@@ -12,7 +12,7 @@ function LoginForm({ user, onLogin}) {
       body: JSON.stringify({ email }),
     })
       .then((r) => r.json())
-      .then((user) => onLogin(user));
+      .then((user) => setUser(user));
   }
 
   return (

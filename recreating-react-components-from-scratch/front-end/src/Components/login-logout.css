@@ -29,5 +29,7 @@ form > input {
 }
 
 .welcome-message {
+  margin-left: auto;
+  margin-right: auto;
   color: white;
 }

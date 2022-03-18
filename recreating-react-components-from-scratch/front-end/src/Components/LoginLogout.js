@@ -15,9 +15,9 @@ function LoginLogout({ user, setUser}) {
 
   function renderForm() {
     if (user) {
-      return <h2>Welcome, !</h2>;
+      return <p className="welcome-message">Welcome, {user.first_name}!</p>;
     } else {
-      return <LoginForm user={user} onLogin={setUser} />;
+      return <LoginForm user={user} setUser={setUser} />;
     }
   }
 

@@ -4,7 +4,7 @@ import * as GiIcon from "react-icons/gi";
 import { Link } from "react-router-dom";
 import LoginLogout from "./LoginLogout";
 
-function SimpleNavbar() {
+function SimpleNavbar({user, setUser}) {
   const [isOpen, setIsOpen] = useState(false);
   const myRef = useRef();
   const sidebarRef = useRef();
@@ -53,7 +53,7 @@ function SimpleNavbar() {
       </div>
       {isOpen === true ? (
         <div id="sidebar" className="pop-out-menu charcoal" ref={sidebarRef}>
-          <LoginLogout />
+          <LoginLogout user={user} setUser={setUser} />
           <span className="ul-title">Components</span>
           <ul>
             <li>
