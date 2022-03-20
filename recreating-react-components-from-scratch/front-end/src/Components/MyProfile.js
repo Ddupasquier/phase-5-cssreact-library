@@ -3,6 +3,7 @@ import "./my-profileedit.css";
 
 function MyProfile({ user }) {
   const [userFav, setUserFav] = useState([]);
+  const [userContrib, setUserContrib] = useState([]);
 
   useEffect(() => {
     fetch("/user_favorites/")
@@ -12,14 +13,27 @@ function MyProfile({ user }) {
       });
   }, []);
 
+  useEffect(() => {
+    fetch("/user_components/")
+      .then((r) => r.json())
+      .then((contribData) => {
+        setUserContrib(contribData);
+      });
+  }, []);
+
+
+
   let favs = userFav.filter((fav) => fav.user.id === user.id);
   const userFavs = favs.map((fav) => fav.component.name)
+
+  let contribs = userContrib.filter((contrib) => contrib.user.id === user.id);
+  const userContribs = contribs.map((contrib) => contrib.component.name)
 
   return (
     <>
       <div className="my-profile segment off-white">
         <div className="user-info">
-          {user.img === undefined ? (
+          {user.img === null ? (
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"
               alt="placeholder"
@@ -43,12 +57,14 @@ function MyProfile({ user }) {
             Favorites
             <hr />
             <ul>
-              {userFavs.map((f) => <li>{f}</li>)}
+              {userFavs.map((f) => <li key={userFav.id}>{f}</li>)}
               </ul>
             {user.is_contributor === true ? (
               <div className="contributor-container">
                 Contributed To
                 <hr />
+                <ul>{userContribs.map((f) => <li key={userContrib.id}>{f}</li>)}</ul>
+                
               </div>
             ) : null}
           </div>

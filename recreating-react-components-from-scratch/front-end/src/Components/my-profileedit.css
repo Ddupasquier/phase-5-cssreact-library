@@ -6,6 +6,12 @@
     width: 60vw;
 }
 
+.edit-profile {
+    margin-top: 15vh;
+    box-sizing: border-box;
+    width: 60vw;
+}
+
 .user-info > img {
     width: 100%;
     border-radius: none;
