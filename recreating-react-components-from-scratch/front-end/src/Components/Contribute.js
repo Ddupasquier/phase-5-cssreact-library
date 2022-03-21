@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./contribute.css"
+
 function Contribute({ user }) {
   const [name, setName] = useState("");
   const [html, setHTML] = useState("");
@@ -19,32 +21,37 @@ function Contribute({ user }) {
   }
 
   return (
-    <div className="edit-profile segment off-white">
+    <div className="contribute-container segment off-white">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Component Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        ></input>
+          className="contrib-input"
+        ></input><br />
         <textarea
           type="text"
           placeholder="HTML"
           value={html}
           onChange={(e) => setHTML(e.target.value)}
-        ></textarea>
+          className="contrib-textarea"
+        ></textarea><br />
         <textarea
           type="text"
           placeholder="CSS"
           value={css}
           onChange={(e) => setCSS(e.target.value)}
-        ></textarea>
+          className="contrib-textarea"
+        ></textarea><br />
         <input
           type="text"
           placeholder="User ID"
+          readOnly
           value={user_id}
           onChange={(e) => setUserID(e.target.value)}
-        ></input>
+          className="contrib-input"
+        ></input><br />
         <button type="submit">All Done!</button>
       </form>
     </div>

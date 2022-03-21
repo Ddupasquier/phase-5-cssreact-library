@@ -1,0 +1,18 @@
+.contrib-input {
+    width: 30vw;
+}
+
+.contrib-textarea {
+    width: 30vw;
+    resize: vertical;
+}
+
+.contribute-container {
+    
+        margin-top: 15vh;
+        box-sizing: border-box;
+        width: fit-content;
+        padding: 3%;
+        text-align: center;
+    
+}

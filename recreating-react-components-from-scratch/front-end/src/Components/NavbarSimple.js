@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./navbar-simple.css";
 import * as GiIcon from "react-icons/gi";
+import * as FiIcon from "react-icons/fi";
 import { Link } from "react-router-dom";
 import LoginLogout from "./LoginLogout";
 
@@ -65,25 +66,22 @@ function SimpleNavbar({ user, setUser }) {
           <GiIcon.GiHamburgerMenu />
         </div>
         <div className="logo">
-          <span className="logo-text">Simple NavBar</span>
+          <span className="logo-text">My React/CSS Library</span>
         </div>
         <div className="navbar-buttons">
           <Link to="/" className="nav-button2">
             <span className="nav-link-text">Home</span>
           </Link>
-          <Link to="/about" className="nav-button1">
-            <span className="nav-link-text">About</span>
-          </Link>
-          <Link to="/components" className="nav-button2">
+          <Link to="/components" className="nav-button1">
             <span className="nav-link-text">Components</span>
           </Link>
           {user !== null ? (
-            <Link to="/contact" className="nav-button1">
+            <Link to="/contact" className="nav-button2">
               <span className="nav-link-text">Favorites</span>
             </Link>
           ) : null}
           {user !== null && user.is_contributor === true ? (
-            <Link to="/contribute" className="nav-button2">
+            <Link to="/contribute" className="nav-button1">
               <span className="nav-link-text">Contribute</span>
             </Link>
           ) : null}
@@ -121,14 +119,21 @@ function SimpleNavbar({ user, setUser }) {
             </li>
           </ul>
           <hr />
-          <span className="ul-title">Sources</span>
+          <span className="ul-title">Similar Sites</span>
           <u>
-            <li>
-              <Link to="https://semantic-ui.com/" className="pop-out-button">Semantic UI</Link>
-            </li>
-            <li>
-              <Link to="https://react-bootstrap.github.io/" className="pop-out-button">React Bootstrap</Link>
-            </li>
+            <span>
+              <Link to="https://semantic-ui.com/" className="pop-out-button">
+                Semantic UI <FiIcon.FiExternalLink />
+              </Link>
+            </span><br />
+            <span>
+              <Link
+                to="https://react-bootstrap.github.io/"
+                className="pop-out-button"
+              >
+                React Bootstrap <FiIcon.FiExternalLink />
+              </Link>
+            </span>
           </u>
           <hr />
           <span className="ul-title">ReadMe</span>
