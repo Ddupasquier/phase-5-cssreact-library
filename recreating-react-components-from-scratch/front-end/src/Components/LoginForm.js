@@ -23,7 +23,6 @@ function LoginForm({ user, setUser, handleClose }) {
         }
       });
     setIsLogin(true);
-    // handleClose();
   }
 
   function ifSignup(e) {

@@ -35,7 +35,7 @@ function SimpleNavbar({ user, setUser }) {
       return (
         <>
           <hr />
-          <span className="ul-title">{user.first_name}'s Profile</span>
+          <span className="ul-title">{user.first_name !== null ? user.first_name : "user"}'s Profile</span>
           <ul>
             <li>
               <Link
