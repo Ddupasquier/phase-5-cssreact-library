@@ -138,6 +138,8 @@ function SimpleNavbar({ user, setUser }) {
           <hr />
           <span className="ul-title">ReadMe</span>
           {renderMyProfile()}
+          <hr />
+          <span className="ul-title"><Link to="/ADMIN" className="ul-title">ADMIN</Link></span>
         </div>
       ) : null}
     </>

@@ -18,6 +18,10 @@ function MyProfileEdit({ user, setUser }) {
       }).then((res) => res.json());
     }
 
+    if (user === null) {
+      return "Loading..."
+    }
+
   return (
     <div className="edit-profile segment off-white">
       <form onSubmit={handleSubmit}>

@@ -12,9 +12,14 @@ import Navs from "./Components/Navs";
 import MyProfile from "./Components/MyProfile";
 import MyProfileEdit from "./Components/MyProfileEdit";
 import Contribute from "./Components/Contribute";
+import ADMIN from "./Components/ADMIN";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(localStorage.getItem("user") || null);
+
+  useEffect(() => {
+    localStorage.setItem("user", user)
+  }, [user])
 
   useEffect(() => {
     fetch("/me").then((response) => {
@@ -36,9 +41,10 @@ function App() {
         <Route path="/forms" element={<Forms />} />
         <Route path="/segments" element={<Segments />} />
         <Route path="/navs" element={<Navs />} />
-        <Route path="/my-profile/:name" element={<MyProfile user={user} />} />
+        <Route path="/my-profile/:name" element={<MyProfile user={user} setUser={setUser} />} />
         <Route path="/edit-profile/:name" element={<MyProfileEdit user={user} setUser={setUser} />} />
         <Route path="/contribute" element={<Contribute user={user}/>} />
+        <Route path="/ADMIN" element={<ADMIN />} />
         </Routes>
       <br />
       <Footer />

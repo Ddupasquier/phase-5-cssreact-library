@@ -1,0 +1,8 @@
+.home-page-container {
+    margin: auto;
+    margin-top: 15vh;
+    padding: 3%;
+    width: 60vw;
+    text-align: justify;
+    border-radius: 8px;
+}

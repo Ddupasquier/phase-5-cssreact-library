@@ -5,6 +5,7 @@
 .contrib-textarea {
     width: 30vw;
     resize: vertical;
+    margin-left: 1%;
 }
 
 .contribute-container {

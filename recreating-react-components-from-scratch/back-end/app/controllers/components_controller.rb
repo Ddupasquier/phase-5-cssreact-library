@@ -16,9 +16,6 @@ class ComponentsController < ApplicationController
         comp = Component.new(component_params)
         comp.user = user
         comp.save
-        # user = Component.create!(component_params)
-        # user_c = UserComponent.create!(user_id: sessions[:user_id], component_id: user_c.last[:component_id])
-        # render json:user
     end
 
     private

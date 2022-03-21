@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./my-profileedit.css";
 
-function MyProfile({ user }) {
+function MyProfile({ user, setUser }) {
   const [userFav, setUserFav] = useState([]);
   const [userContrib, setUserContrib] = useState([]);
 
@@ -14,7 +14,7 @@ function MyProfile({ user }) {
   }, []);
 
   useEffect(() => {
-    fetch("/user_components/")
+    fetch("/components")
       .then((r) => r.json())
       .then((contribData) => {
         setUserContrib(contribData);
@@ -25,7 +25,15 @@ function MyProfile({ user }) {
   const userFavs = favs.map((fav) => fav.component.name);
 
   let contribs = userContrib.filter((contrib) => contrib.user.id === user.id);
-  const userContribs = contribs.map((contrib) => contrib.component.name);
+  const userContribs = contribs.map((contrib) => contrib.name);
+
+  if (userContrib === []) {
+    return "Loading..."
+  }
+
+  if (user === null) {
+    return "Loading..."
+  }
 
   return (
     <>
