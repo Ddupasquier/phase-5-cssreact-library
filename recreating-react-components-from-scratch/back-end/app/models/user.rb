@@ -2,6 +2,6 @@ class User < ApplicationRecord
     has_secure_password
     has_many :comments
     has_many :user_favorites
-    has_many :user_components
-    has_many :components, through: :user_components
+    has_many :components
+    has_many :favorited_components, through: :user_favorites, source: :component
 end

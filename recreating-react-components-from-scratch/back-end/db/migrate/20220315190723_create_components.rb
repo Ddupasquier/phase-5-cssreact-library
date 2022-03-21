@@ -2,8 +2,9 @@ class CreateComponents < ActiveRecord::Migration[7.0]
   def change
     create_table :components do |t|
       t.string :name
-      t.string :html
-      t.string :css
+      t.text :html
+      t.text :css
+      t.integer :user_id
 
       t.timestamps
     end

@@ -83,7 +83,7 @@ function SimpleNavbar({ user, setUser }) {
             </Link>
           ) : null}
           {user !== null && user.is_contributor === true ? (
-            <Link to="/" className="nav-button2">
+            <Link to="/contribute" className="nav-button2">
               <span className="nav-link-text">Contribute</span>
             </Link>
           ) : null}
@@ -122,6 +122,14 @@ function SimpleNavbar({ user, setUser }) {
           </ul>
           <hr />
           <span className="ul-title">Sources</span>
+          <u>
+            <li>
+              <Link to="https://semantic-ui.com/" className="pop-out-button">Semantic UI</Link>
+            </li>
+            <li>
+              <Link to="https://react-bootstrap.github.io/" className="pop-out-button">React Bootstrap</Link>
+            </li>
+          </u>
           <hr />
           <span className="ul-title">ReadMe</span>
           {renderMyProfile()}

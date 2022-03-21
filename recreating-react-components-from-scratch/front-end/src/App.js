@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import Navs from "./Components/Navs";
 import MyProfile from "./Components/MyProfile";
 import MyProfileEdit from "./Components/MyProfileEdit";
+import Contribute from "./Components/Contribute";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -37,7 +38,8 @@ function App() {
         <Route path="/navs" element={<Navs />} />
         <Route path="/my-profile/:name" element={<MyProfile user={user} />} />
         <Route path="/edit-profile/:name" element={<MyProfileEdit user={user} setUser={setUser} />} />
-      </Routes>
+        <Route path="/contribute" element={<Contribute user={user}/>} />
+        </Routes>
       <br />
       <Footer />
     </div>

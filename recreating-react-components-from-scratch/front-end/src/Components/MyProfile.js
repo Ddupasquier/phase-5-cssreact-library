@@ -21,13 +21,11 @@ function MyProfile({ user }) {
       });
   }, []);
 
-
-
   let favs = userFav.filter((fav) => fav.user.id === user.id);
-  const userFavs = favs.map((fav) => fav.component.name)
+  const userFavs = favs.map((fav) => fav.component.name);
 
   let contribs = userContrib.filter((contrib) => contrib.user.id === user.id);
-  const userContribs = contribs.map((contrib) => contrib.component.name)
+  const userContribs = contribs.map((contrib) => contrib.component.name);
 
   return (
     <>
@@ -57,14 +55,19 @@ function MyProfile({ user }) {
             Favorites
             <hr />
             <ul>
-              {userFavs.map((f) => <li key={userFav.id}>{f}</li>)}
-              </ul>
+              {userFavs.map((f) => (
+                <li key={f.id}>{f}</li>
+              ))}
+            </ul>
             {user.is_contributor === true ? (
               <div className="contributor-container">
                 Contributed To
                 <hr />
-                <ul>{userContribs.map((f) => <li key={userContrib.id}>{f}</li>)}</ul>
-                
+                <ul>
+                  {userContribs.map((c) => (
+                    <li key={c.id}>{c}</li>
+                  ))}
+                </ul>
               </div>
             ) : null}
           </div>

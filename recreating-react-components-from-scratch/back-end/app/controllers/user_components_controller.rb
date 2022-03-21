@@ -11,7 +11,16 @@ class UserComponentsController < ApplicationController
         render json: @user_component, status: :ok
     end
 
+    def create
+        user = UserComponent.create!(component_params)
+        render json:user
+    end
+
     private
+
+    def component_params
+        params.permit(:user_id)
+    end
 
     def find_user_comp
         @user_component = UserComponent.find_by(id:params[:id])
