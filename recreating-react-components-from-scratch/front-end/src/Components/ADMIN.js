@@ -12,6 +12,18 @@ function ADMIN() {
       });
   }, []);
 
+  function handleDelete(p) {
+    fetch(`/pending_components/${p.id}`, {
+      method: "DELETE",
+    });
+  }
+
+  function handleMoveAndDelete(p) {
+      fetch(`/moveanddelete/${p.id}`, {
+          method: "DELETE",
+      })
+  }
+
   const eachSub = allPendingSub.map((p) => {
     const css = p.css;
 
@@ -20,8 +32,18 @@ function ADMIN() {
         -{" "}
         <code key={p.id} className="code-block">
           <b>{p.name}</b>{" "}
-          <button className="approve">Approve</button>{" "}
-          <button className="deny">Deny</button> <br />
+          <button className="approve" onClick={() => {handleMoveAndDelete(p)}}>
+            Approve
+          </button>{" "}
+          <button
+            className="deny"
+            onClick={() => {
+              handleDelete(p);
+            }}
+          >
+            Deny
+          </button>{" "}
+          <br />
           {p.html}
           <br />
           {css.split("\n").map((v, i) => {

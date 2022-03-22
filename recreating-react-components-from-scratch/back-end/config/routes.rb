@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   delete "/logout", to: "sessions#destroy"
 
+  delete "/moveanddelete/:id", to: "pending_components#moveanddelete"
+
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

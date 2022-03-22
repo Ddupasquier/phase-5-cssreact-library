@@ -22,6 +22,14 @@ class PendingComponentsController < ApplicationController
         head :no_content
     end
 
+    def moveanddelete
+        p = PendingComponent.find_by(id:params[:id])
+        user = p.get_user
+        new_comp = user.components.create!(name: p.name, html: p.html, css: p.css)
+        p.destroy
+        render json: new_comp, status: :created
+    end
+
     private
 
     def pending_params
