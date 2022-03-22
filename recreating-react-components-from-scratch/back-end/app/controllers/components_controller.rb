@@ -12,10 +12,9 @@ class ComponentsController < ApplicationController
     end
 
     def create
-        user = User.find(session[:user_id])
-        comp = Component.new(component_params)
-        comp.user = user
-        comp.save
+        new_component = Component.create!(component_params)
+        new_component.valid?
+        render json: new_component, status: :created
     end
 
     private

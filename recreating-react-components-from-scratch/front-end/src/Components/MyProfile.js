@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./my-profileedit.css";
 
-function MyProfile({ user, setUser }) {
+function MyProfile({ user }) {
   const [userFav, setUserFav] = useState([]);
   const [userContrib, setUserContrib] = useState([]);
 

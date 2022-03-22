@@ -9,7 +9,7 @@ function Contribute({ user }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`/components`, {
+    fetch(`/pending_components`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -60,7 +60,7 @@ function LoginForm({ user, setUser, handleClose }) {
         onChange={(e) => setEmail(e.target.value)}
       ></input>
       <input
-        type="text"
+        type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}

@@ -139,7 +139,7 @@ function SimpleNavbar({ user, setUser }) {
           <span className="ul-title">ReadMe</span>
           {renderMyProfile()}
           <hr />
-          <span className="ul-title"><Link to="/ADMIN" className="ul-title">ADMIN</Link></span>
+          {user !== null && user.id === 1 ? <span className="ul-title"><Link to="/ADMIN" className="ul-title">ADMIN</Link></span> : null}
         </div>
       ) : null}
     </>
