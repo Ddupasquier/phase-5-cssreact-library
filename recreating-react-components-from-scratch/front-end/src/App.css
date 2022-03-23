@@ -63,3 +63,32 @@ hr {
   color: white;
 }
 
+.code-modal {
+    position: relative;
+    max-width: 90%;
+    max-height: 70%;
+    background: white;
+    color: rgb(0, 0, 0);
+    padding: 2%;
+    top: 5%;
+    margin: auto;
+    word-wrap: break-word;
+    text-align: left;
+    overflow: auto;
+}
+
+.each-block {
+  padding: 1%;
+}
+
+.each-block > h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.each-block:nth-child(odd) {
+  background-color: rgb(235, 235, 235);
+}
+.each-block:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}

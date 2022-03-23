@@ -1,11 +1,16 @@
 import React from "react";
+import ButtonModal from "./ButtonModal";
 import "./buttons.css";
 
-function Buttons() {
-return (
+function Buttons({ allComps }) {
+  return (
     <>
       <div className="button-segment">
-        <p>Just for reference, here's a completely unstyled button. Boring, right?</p>
+        <ButtonModal allComps={allComps} />
+        <p>
+          Just for reference, here's a completely unstyled button. Boring,
+          right?
+        </p>
         <button className="button btn1">Simple No CSS Button (b1)</button>
         <hr />
         <button className="button btn2">BIGREDBUTTON (b2)</button>

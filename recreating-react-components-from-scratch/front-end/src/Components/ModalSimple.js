@@ -13,9 +13,10 @@ function SimpleModal() {
   }
 
   return (
-    <div className="modals-container">
-      <button className="btn5" onClick={handleOpen}>
-        'Simple Modal' Button
+    // <div className="modals-container">
+    <>
+      <button className="btn4" onClick={handleOpen}>
+        {"< >"}
       </button>
 
       {shown === true ? (
@@ -44,7 +45,8 @@ function SimpleModal() {
           </div>
         
       ) : null}
-    </div>
+    {/* </div> */}
+    </>
   );
 }
 
