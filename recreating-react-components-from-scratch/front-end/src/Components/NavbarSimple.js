@@ -76,7 +76,7 @@ function SimpleNavbar({ user, setUser }) {
             <span className="nav-link-text">Components</span>
           </Link>
           {user !== null ? (
-            <Link to="/contact" className="nav-button2">
+            <Link to="/favorites" className="nav-button2">
               <span className="nav-link-text">Favorites</span>
             </Link>
           ) : null}

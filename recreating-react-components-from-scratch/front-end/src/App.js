@@ -13,6 +13,7 @@ import MyProfile from "./Components/MyProfile";
 import MyProfileEdit from "./Components/MyProfileEdit";
 import Contribute from "./Components/Contribute";
 import ADMIN from "./Components/ADMIN";
+import Favorites from "./Components/Favorites";
 
 function App() {
   const [user, setUser] = useState(localStorage.getItem("user") || null);
@@ -59,6 +60,7 @@ function App() {
         />
         <Route path="/contribute" element={<Contribute user={user} />} />
         <Route path="/ADMIN" element={<ADMIN />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
       <br />
       <Footer />

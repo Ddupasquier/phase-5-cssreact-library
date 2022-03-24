@@ -5,8 +5,6 @@ function MyProfile({ user }) {
   const [userFav, setUserFav] = useState([]);
   const [userContrib, setUserContrib] = useState([]);
 
-  // console.log(userFav)
-
   useEffect(() => {
     fetch(`/current_user_fav`)
       .then((r) => r.json())

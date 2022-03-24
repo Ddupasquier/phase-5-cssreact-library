@@ -6,6 +6,18 @@ import LoginForm from "./LoginForm";
 function LoginLogout({ user, setUser }) {
   const [loginShown, setLoginShown] = useState(false);
 
+  // login on signup
+  // show error when login fail
+  // make favorites page OR just remove the nav button
+  // Feedback when profile edit success (show alert or somethihng, idk)
+  // Feedback when requesting to be a contributor. Disable button, show some message like "Your request has been recieved" or whatever
+  // If user does not have faves or contributions just show some text saying that instead of 'Loading...'
+  // ReadMe does not do anything
+  // Components page is confusingly empty when I don't have anything
+  // rid of top nav buttons
+  // Form validation on the login form, check for empty
+  // second login button goes bye bye
+
   function handleOpen() {
     setLoginShown(true);
   }
