@@ -5,8 +5,10 @@ function MyProfile({ user }) {
   const [userFav, setUserFav] = useState([]);
   const [userContrib, setUserContrib] = useState([]);
 
+  // console.log(userFav)
+
   useEffect(() => {
-    fetch("/user_favorites/")
+    fetch(`/current_user_fav`)
       .then((r) => r.json())
       .then((favData) => {
         setUserFav(favData);
@@ -14,18 +16,17 @@ function MyProfile({ user }) {
   }, []);
 
   useEffect(() => {
-    fetch("/components")
+    fetch("/current_user_components")
       .then((r) => r.json())
       .then((contribData) => {
         setUserContrib(contribData);
       });
   }, []);
 
-  let favs = userFav.filter((fav) => fav.user.id === user.id);
-  const userFavs = favs.map((fav) => fav.component.name);
 
-  let contribs = userContrib.filter((contrib) => contrib.user.id === user.id);
-  const userContribs = contribs.map((contrib) => contrib.name);
+  const userFavs = userFav.map((fav) => fav.component.name);
+
+  const userContribs = userContrib.map((contrib) => contrib.name);
 
   if (userContrib === []) {
     return "Loading..."

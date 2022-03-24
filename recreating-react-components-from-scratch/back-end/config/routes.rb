@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   patch "/update_contrib/:id", to: "users#update_contrib"
   delete "/moveanddelete/:id", to: "pending_components#moveanddelete"
+  get "/current_user_fav", to: "user_favorites#current_user_fav"
+  get "/current_user_components", to: "components#current_user_components"
 
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

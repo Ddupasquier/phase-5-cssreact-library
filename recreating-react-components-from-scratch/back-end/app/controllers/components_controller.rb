@@ -11,6 +11,11 @@ class ComponentsController < ApplicationController
         render json: @component, status: :ok
     end
 
+    def current_user_components
+        comp = Component.where(["user_id = :u", { u: session[:user_id] }])
+        render json: comp
+    end
+
     def create
         new_component = Component.create!(component_params)
         new_component.valid?

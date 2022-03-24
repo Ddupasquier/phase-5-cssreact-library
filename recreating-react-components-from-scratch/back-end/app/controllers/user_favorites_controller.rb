@@ -6,6 +6,11 @@ class UserFavoritesController < ApplicationController
         render json: user_favorites, status: :ok
     end
 
+    def current_user_fav
+        fav = UserFavorite.where(["user_id = :u", { u: session[:user_id] }])
+        render json: fav
+    end
+
     def show
         @user_favorite
         render json: @user_favorite, status: :ok
