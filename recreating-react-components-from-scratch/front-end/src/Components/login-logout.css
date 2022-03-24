@@ -1,4 +1,6 @@
 .login-button {
+  margin: 0;
+  height: 22px;
   color: white;
   background: black;
   border: none;
@@ -32,10 +34,12 @@ form > input {
 }
 
 .welcome-container {
-  padding: 6%;
+  background: linear-gradient(#ffffff, #ffffff00);
+  padding: 5%;
 }
 
 .welcome-message {
+  margin: 0;
   margin-left: auto;
   margin-right: auto;
   color: white;

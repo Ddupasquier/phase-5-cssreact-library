@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-function LoginForm({ user, setUser, handleClose }) {
+function LoginForm({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState();
-  const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState("");
 
   function ifLogin(e) {
     e.preventDefault();
@@ -18,6 +18,7 @@ function LoginForm({ user, setUser, handleClose }) {
       .then((user) => {
         if (user.error) {
           setErrors(errors);
+          alert("Your email address or password (or both, for that matter) is incorrect!");
         } else {
           setUser(user);
         }
@@ -39,7 +40,7 @@ function LoginForm({ user, setUser, handleClose }) {
       body: JSON.stringify(user),
     }).then((res) => {
       if (res.ok) {
-        res.json();
+        res.json().then(ifLogin(e));
       } else {
         res.json().then((e) => setErrors(Object.entries(e.error).flat()));
       }

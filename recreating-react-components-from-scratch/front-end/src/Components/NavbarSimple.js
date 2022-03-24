@@ -35,7 +35,9 @@ function SimpleNavbar({ user, setUser }) {
       return (
         <>
           <hr />
-          <span className="ul-title">{user.first_name !== null ? user.first_name : "user"}'s Profile</span>
+          <span className="ul-title">
+            {user.first_name !== null ? user.first_name : "user"}'s Profile
+          </span>
           <ul>
             <li>
               <Link
@@ -52,6 +54,13 @@ function SimpleNavbar({ user, setUser }) {
               >
                 Edit
               </Link>
+              {user !== null && user.is_contributor === true ? (
+                <li>
+                  <Link to="/contribute" className="pop-out-button">
+                    Contribute
+                  </Link>
+                </li>
+              ) : null}
             </li>
           </ul>
         </>
@@ -66,9 +75,9 @@ function SimpleNavbar({ user, setUser }) {
           <GiIcon.GiHamburgerMenu />
         </div>
         <div className="logo">
-          <span className="logo-text">My React/CSS Library</span>
+          <Link to="/" className="logo-text">My React/CSS Library</Link>
         </div>
-        <div className="navbar-buttons">
+        {/* <div className="navbar-buttons">
           <Link to="/" className="nav-button2">
             <span className="nav-link-text">Home</span>
           </Link>
@@ -80,12 +89,7 @@ function SimpleNavbar({ user, setUser }) {
               <span className="nav-link-text">Favorites</span>
             </Link>
           ) : null}
-          {user !== null && user.is_contributor === true ? (
-            <Link to="/contribute" className="nav-button1">
-              <span className="nav-link-text">Contribute</span>
-            </Link>
-          ) : null}
-        </div>
+        </div> */}
       </div>
       {isOpen === true ? (
         <div id="sidebar" className="pop-out-menu charcoal" ref={sidebarRef}>
@@ -125,7 +129,8 @@ function SimpleNavbar({ user, setUser }) {
               <Link to="https://semantic-ui.com/" className="pop-out-button">
                 Semantic UI <FiIcon.FiExternalLink />
               </Link>
-            </span><br />
+            </span>
+            <br />
             <span>
               <Link
                 to="https://react-bootstrap.github.io/"
@@ -139,7 +144,13 @@ function SimpleNavbar({ user, setUser }) {
           <span className="ul-title">ReadMe</span>
           {renderMyProfile()}
           <hr />
-          {user !== null && user.id === 1 ? <span className="ul-title"><Link to="/ADMIN" className="ul-title">ADMIN</Link></span> : null}
+          {user !== null && user.id === 1 ? (
+            <span className="ul-title">
+              <Link to="/ADMIN" className="ul-title">
+                ADMIN
+              </Link>
+            </span>
+          ) : null}
         </div>
       ) : null}
     </>

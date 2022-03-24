@@ -17,77 +17,17 @@
 }
 
 .logo-text {
-  user-select: none;
+  user-select: pointer;
+  color: white;
+  text-decoration: none;
   margin-top: 3%;
   height: 100%;
   font-family: Copperplate, Copperplate Gothic Light, fantasy;
   font-size: 3vh;
 }
 
-.navbar-buttons {
-  display: flex;
-  float: right;
-  text-decoration: none;
-  width: fit-content;
-  height: 5.5vh;
-}
-
-.nav-button1 {
-  border: none;
-  background: rgb(105, 237, 255);
-  border: none;
-  color: white;
-  font-weight: bold;
-  font-size: 2vh;
-  text-decoration: none;
-  font-family: "Roboto Condensed", sans-serif;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 20;
-}
-
-.nav-button1:hover {
-  background: rgb(73, 234, 255);
-}
-
-.nav-button1:active {
-  background: rgb(105, 237, 255);
-}
-
-.nav-button2 {
-  background: rgb(77, 77, 77);
-  border: none;
-  color: white;
-  font-weight: bold;
-  font-size: 2vh;
-  text-decoration: none;
-  font-family: "Roboto Condensed", sans-serif;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 20;
-}
-
-.nav-button2:hover {
-  background: rgb(88, 88, 88);
-}
-
-.nav-button2:active {
-  background: rgb(77, 77, 77);
-}
-
-.nav-link-text {
-  position: relative;
-  top: 15%;
-}
-
 @media only screen and (max-height: 400px) {
-  .nav-button1, .nav-button2, .logo-text {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 620px) {
-  .nav-button1, .nav-button2 {
+  .logo-text {
     display: none;
   }
 }
@@ -108,7 +48,7 @@
   flex-direction: column;
   position: fixed;
   top: 5.5%;
-  width: 10rem;
+  width: 12rem;
   height: 94.5%;
   z-index: 1000;
   font-family: "Roboto Condensed", sans-serif;
