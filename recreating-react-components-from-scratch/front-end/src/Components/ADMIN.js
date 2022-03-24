@@ -52,7 +52,7 @@ function ADMIN() {
   // contributor
   const eachCon = allPendingCon.map((c) => {
     return (
-      <>
+      <Fragment key={c.id}>
         {c.user.first_name}
         <button
           className="approve"
@@ -73,7 +73,7 @@ function ADMIN() {
         <br />
         {c.user.email}
         <br />
-      </>
+      </Fragment>
     );
   });
 
@@ -82,7 +82,7 @@ function ADMIN() {
     const css = p.css;
 
     return (
-      <>
+      <Fragment key={p.id}>
         -{" "}
         <code key={p.id} className="code-block">
           <b>{p.name}</b>{" "}
@@ -114,7 +114,7 @@ function ADMIN() {
             );
           })}
         </code>
-      </>
+      </Fragment>
     );
   });
 
