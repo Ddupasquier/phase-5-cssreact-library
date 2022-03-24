@@ -56,7 +56,7 @@ function MyProfile({ user }) {
           </p>
         </div>
         {userFav.length === 0 ? (
-          "Loading..."
+          "You haven't favorited anything yet"
         ) : (
           <div className="favorites charcoal">
             Favorites

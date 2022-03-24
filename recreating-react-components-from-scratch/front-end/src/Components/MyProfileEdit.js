@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./my-profileedit.css";
 
 function MyProfileEdit({ user, setUser }) {
@@ -67,7 +68,7 @@ function MyProfileEdit({ user, setUser }) {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         ></input>
-        <button type="submit">All Done!</button>
+        <button type="submit"><Link to={`/my-profile/${user.first_name}${user.last_name}`}>All Done!</Link></button>
       </form>
       {user.is_contributor === true? null : <form onSubmit={handlePendCont}>
         <label>Want to become a contributor? </label>
