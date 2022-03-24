@@ -45,7 +45,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/modals" element={<ModalSimple />} />
-        <Route path="/buttons" element={<Buttons allComps={allComps} />} />
+        <Route path="/buttons" element={<Buttons allComps={allComps} user={user}/>} />
         <Route path="/forms" element={<Forms />} />
         <Route path="/segments" element={<Segments />} />
         <Route path="/navs" element={<Navs />} />

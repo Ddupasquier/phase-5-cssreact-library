@@ -2,11 +2,11 @@ import React from "react";
 import ButtonModal from "./ButtonModal";
 import "./buttons.css";
 
-function Buttons({ allComps }) {
+function Buttons({ allComps, user }) {
   return (
     <>
       <div className="button-segment">
-        <ButtonModal allComps={allComps} />
+        <ButtonModal allComps={allComps} user={user}/>
         <p>
           Just for reference, here's a completely unstyled button. Boring,
           right?

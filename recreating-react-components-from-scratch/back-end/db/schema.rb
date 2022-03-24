@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_22_164436) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_23_182130) do
   create_table "comments", force: :cascade do |t|
     t.string "comment"
     t.integer "user_id", null: false
@@ -38,6 +38,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_22_164436) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_pending_components_on_user_id"
+  end
+
+  create_table "pending_contributors", force: :cascade do |t|
+    t.boolean "is_contributor"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_pending_contributors_on_user_id"
   end
 
   create_table "user_components", force: :cascade do |t|
@@ -73,6 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_22_164436) do
   add_foreign_key "comments", "components"
   add_foreign_key "comments", "users"
   add_foreign_key "pending_components", "users"
+  add_foreign_key "pending_contributors", "users"
   add_foreign_key "user_components", "components"
   add_foreign_key "user_components", "users"
   add_foreign_key "user_favorites", "components"

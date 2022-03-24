@@ -23,6 +23,12 @@ class UsersController < ApplicationController
       render json: current_user
   end
 
+  def update_contrib
+    current_user = User.find_by(id:params[:id])
+    current_user.update!(user_update_params)
+    render json: current_user
+  end
+
   private
 
   def render_unprocessable_entity(invalid)
@@ -34,6 +40,6 @@ class UsersController < ApplicationController
   end
 
   def user_update_params
-      params.permit(:first_name, :last_name, :email, :phone, :img, :is_contributor)
+      params.permit(:id, :first_name, :last_name, :email, :phone, :img, :is_contributor)
   end
 end

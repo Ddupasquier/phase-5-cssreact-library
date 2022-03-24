@@ -15,11 +15,20 @@ function MyProfileEdit({ user, setUser }) {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ first_name, last_name, email, img, phone }),
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .then((newInfo) => {
+        setUser(newInfo);
+      });
   }
 
-  // set up separate post for contributor to admin
-  // patch from admin if approved
+  function handlePendCont(e) {
+    e.preventDefault();
+    fetch(`/pending_contributors`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    }).then((res) => res.json());
+  }
 
   if (user === null) {
     return "Loading...";
@@ -60,16 +69,16 @@ function MyProfileEdit({ user, setUser }) {
         ></input>
         <button type="submit">All Done!</button>
       </form>
-      <form>
-        <label>Contributor? </label>
+      {user.is_contributor === true? null : <form onSubmit={handlePendCont}>
+        <label>Want to become a contributor? </label>
         <button
-          type="checkbox"
+          type="submit"
           value={is_contributor}
-          onChange={(e) => setIsContrib(e.target.value)}
+          onChange={() => setIsContrib(true)}
         >
           X
         </button>
-      </form>
+      </form>}
     </div>
   );
 }

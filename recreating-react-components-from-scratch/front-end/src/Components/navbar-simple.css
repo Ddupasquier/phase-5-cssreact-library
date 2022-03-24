@@ -86,6 +86,12 @@
   }
 }
 
+@media only screen and (max-width: 620px) {
+  .nav-button1, .nav-button2 {
+    display: none;
+  }
+}
+
 .side-menu-icon {
   display: flex;
   position: absolute;
