@@ -28,6 +28,10 @@ function SimpleNavbar({ user, setUser }) {
     isOpen === false ? setIsOpen(true) : setIsOpen(false);
   }
 
+  // function nameOrId() {
+  //   user.first_name === null ? `${user.id}` : `${user.first_name}${user.last_name}`
+  // }
+
   function renderMyProfile() {
     if (user === null) {
       return null;
@@ -38,16 +42,16 @@ function SimpleNavbar({ user, setUser }) {
           <span className="ul-title">
             {user.first_name !== null ? user.first_name : "user"}'s Profile
           </span>
-          <ul>
-            <li>
+          
+            
               <Link
-                to={`/my-profile/${user.first_name}${user.last_name}`}
+                to={`/my-profile/{${user.first_name}${user.last_name}}`}
                 className="pop-out-button"
               >
                 View
               </Link>
-            </li>
-            <li>
+            
+            
               <Link
                 to={`/edit-profile/${user.first_name}${user.last_name}`}
                 className="pop-out-button"
@@ -55,14 +59,14 @@ function SimpleNavbar({ user, setUser }) {
                 Edit
               </Link>
               {user !== null && user.is_contributor === true ? (
-                <li>
+                
                   <Link to="/contribute" className="pop-out-button">
                     Contribute
                   </Link>
-                </li>
+                
               ) : null}
-            </li>
-          </ul>
+            
+          
         </>
       );
     }
@@ -77,51 +81,32 @@ function SimpleNavbar({ user, setUser }) {
         <div className="logo">
           <Link to="/" className="logo-text">My React/CSS Library</Link>
         </div>
-        {/* <div className="navbar-buttons">
-          <Link to="/" className="nav-button2">
-            <span className="nav-link-text">Home</span>
-          </Link>
-          <Link to="/components" className="nav-button1">
-            <span className="nav-link-text">Components</span>
-          </Link>
-          {user !== null ? (
-            <Link to="/favorites" className="nav-button2">
-              <span className="nav-link-text">Favorites</span>
-            </Link>
-          ) : null}
-        </div> */}
       </div>
       {isOpen === true ? (
         <div id="sidebar" className="pop-out-menu charcoal" ref={sidebarRef}>
           <LoginLogout user={user} setUser={setUser} />
           <span className="ul-title">Components</span>
-          <ul>
-            <li>
+          
               <Link to="/buttons" className="pop-out-button">
                 Buttons
               </Link>
-            </li>
-            <li>
+            
               <Link to="/segments" className="pop-out-button">
                 Segments
               </Link>
-            </li>
-            <li>
+            
               <Link to="/modals" className="pop-out-button">
                 Modals
               </Link>
-            </li>
-            <li>
+            
               <Link to="/forms" className="pop-out-button">
                 Forms
               </Link>
-            </li>
-            <li>
+            
               <Link to="/navs" className="pop-out-button">
                 Navs
               </Link>
-            </li>
-          </ul>
+            
           <hr />
           <span className="ul-title">Similar Sites</span>
           <u>

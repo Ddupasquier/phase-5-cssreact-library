@@ -25,9 +25,9 @@ function CodeModal({ allComps, user }) {
   let filterButton = allComps.filter((b) => b.name.includes("btn"));
   const eachButton = filterButton.map((b) => {
     return (
-      <>
+      <Fragment key={b.id}>
         {" "}
-        <div key={b.id} className="each-block">
+        <div className="each-block">
           <h2>{b.name}</h2>{" "}
           <button onClick={addToFav} value={b.id}>
             Fav
@@ -48,7 +48,7 @@ function CodeModal({ allComps, user }) {
             );
           })}
         </div>
-      </>
+      </Fragment>
     );
   });
 

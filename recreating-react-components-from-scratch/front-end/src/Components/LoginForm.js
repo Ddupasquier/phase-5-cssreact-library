@@ -18,7 +18,9 @@ function LoginForm({ setUser }) {
       .then((user) => {
         if (user.error) {
           setErrors(errors);
-          alert("Your email address or password (or both, for that matter) is incorrect!");
+          alert(
+            "Your email address or password (or both, for that matter) is incorrect!"
+          );
         } else {
           setUser(user);
         }
@@ -42,7 +44,14 @@ function LoginForm({ setUser }) {
       if (res.ok) {
         res.json().then(ifLogin(e));
       } else {
-        res.json().then((e) => setErrors(Object.entries(e.error).flat()));
+        res
+          .json()
+          .then((e) => setErrors(Object.entries(e.error).flat()))
+          .then(
+            alert(
+              "Looks like there's already a profile under that email address..."
+            )
+          );
       }
     });
     setIsLogin(false);
@@ -59,12 +68,14 @@ function LoginForm({ setUser }) {
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        autoComplete="on"
       ></input>
       <input
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        autoComplete="off"
       ></input>
       <button
         type="submit"

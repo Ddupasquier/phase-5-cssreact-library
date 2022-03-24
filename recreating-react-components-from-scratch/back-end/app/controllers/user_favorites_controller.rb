@@ -20,7 +20,7 @@ class UserFavoritesController < ApplicationController
         user = User.find(session[:user_id])
         fav = UserFavorite.new(fav_params)
         fav.user = user
-        fav.save
+        fav.save!
         render json: fav, status: :created
     end
 
