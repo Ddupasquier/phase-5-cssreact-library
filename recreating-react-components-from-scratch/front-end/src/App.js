@@ -16,11 +16,15 @@ import ADMIN from "./Components/ADMIN";
 
 function App() {
   const [user, setUser] = useState(localStorage.getItem("user") || null);
-  const [allComps, setAllComps] = useState([])
+  const [allComps, setAllComps] = useState(localStorage.getItem("components") || null)
 
   useEffect(() => {
     localStorage.setItem("user", user);
   }, [user]);
+
+  useEffect(() => {
+    localStorage.setItem("components", allComps);
+  }, [allComps]);
 
   useEffect(() => {
     fetch("/me").then((response) => {
@@ -58,7 +62,7 @@ function App() {
           element={<MyProfileEdit user={user} setUser={setUser} />}
         />
         <Route path="/contribute" element={<Contribute user={user} />} />
-        <Route path="/ADMIN" element={<ADMIN />} />
+        <Route path="/ADMIN" element={<ADMIN allComps={allComps} />} />
       </Routes>
       <br />
       <Footer />

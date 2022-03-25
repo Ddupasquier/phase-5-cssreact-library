@@ -1,9 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./admin.css";
 
-function ADMIN() {
+function ADMIN({ allComps }) {
   const [allPendingSub, setPendingSub] = useState([]);
   const [allPendingCon, setPendingCon] = useState([]);
+  const [html, setHTML] = useState("");
+  const [css, setCSS] = useState("");
+  const [compFilter, setCompFilter] = useState("");
+
 
   useEffect(() => {
     fetch("/pending_components")
@@ -20,6 +24,25 @@ function ADMIN() {
         setPendingCon(pConData);
       });
   }, []);
+
+  const component = allComps.filter((c) => (
+    c.name.includes(compFilter)
+  ));
+  // console.log(component)
+  console.log(compFilter);
+  console.log(component[0].id)
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch(`/components/${component[0].id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        html,
+        css,
+      }),
+    }).then((res) => res.json());
+  }
 
   function handleDelete(p) {
     fetch(`/pending_components/${p.id}`, {
@@ -45,8 +68,8 @@ function ADMIN() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ is_contributor: true }),
     })
-    .then((r) => r.json())
-    .then((data) => handleDenyCont(c))
+      .then((r) => r.json())
+      .then((data) => handleDenyCont(c));
   }
 
   // contributor
@@ -129,6 +152,36 @@ function ADMIN() {
         Pending Contributors
         <hr />
         {eachCon}
+      </div>
+      {/* patch form */}
+      <div className="code-patch-form segment off-white">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Component Name"
+            value={compFilter}
+            onChange={(e) => setCompFilter(e.target.value)}
+            className="contrib-input"
+          ></input>
+          <br />
+          <textarea
+            type="text"
+            placeholder="HTML"
+            value={component[0].html}
+            onChange={(e) => setHTML(e.target.value)}
+            className="contrib-textarea"
+          ></textarea>
+          <br />
+          <textarea
+            type="text"
+            placeholder="CSS"
+            value={component[0].css}
+            onChange={(e) => setCSS(e.target.value)}
+            className="contrib-textarea"
+          ></textarea>
+          <br />
+          <button type="submit">All Done!</button>
+        </form>
       </div>
     </div>
   );

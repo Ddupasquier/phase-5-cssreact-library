@@ -2,15 +2,8 @@ html, body {
   margin: 0;
 }
 
-/* button {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-
-} */
-
 body {
-  background: rgb(208, 238, 227);
+  background-image: url("https://www.teahub.io/photos/full/10-100334_wallpaper-abstract-black-blue-smoke-src-new-blue.jpg");
   padding: 0;
   padding-bottom: 5vh;
 }
@@ -88,9 +81,14 @@ hr {
   padding: 1%;
 }
 
-.each-block > h2 {
+.each-block > h1 {
   padding: 0;
   margin: 0;
+}
+
+.each-block-button {
+  float: right;
+  filter: invert(100%);
 }
 
 .each-block:nth-child(odd) {

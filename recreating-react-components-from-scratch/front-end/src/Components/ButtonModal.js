@@ -28,12 +28,12 @@ function CodeModal({ allComps, user }) {
       <Fragment key={b.id}>
         {" "}
         <div className="each-block">
-          <h2>{b.name}</h2>{" "}
-          <button onClick={addToFav} value={b.id}>
+          <h1>{b.name}{" "}<button onClick={addToFav} value={b.id} className="btn14 each-block-button">
             Fav
-          </button>
+          </button></h1>{" "}
+          
           <br />
-          <b>HTML/JSX: </b>
+          <b>HTML:</b>
           <br />
           {b.html}
           <br />
@@ -54,7 +54,7 @@ function CodeModal({ allComps, user }) {
 
   return (
     <>
-      <button className="btn4" onClick={handleOpen}>
+      <button className="btn8" onClick={handleOpen}>
         {"<code found here>"}
       </button>
 

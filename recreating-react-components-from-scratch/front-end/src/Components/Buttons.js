@@ -6,12 +6,12 @@ function Buttons({ allComps, user }) {
   return (
     <>
       <div className="button-segment">
-        <ButtonModal allComps={allComps} user={user}/>
-        <p>
+        <ButtonModal allComps={allComps} user={user}/><br />
+        <div className="segment off-white"><p>
           Just for reference, here's a completely unstyled button. Boring,
           right?
         </p>
-        <button className="button btn1">Simple No CSS Button (b1)</button>
+        <button className="button btn1">Simple No CSS Button (b1)</button></div>
         <hr />
         <button className="button btn2">BIGREDBUTTON (b2)</button>
         <hr />

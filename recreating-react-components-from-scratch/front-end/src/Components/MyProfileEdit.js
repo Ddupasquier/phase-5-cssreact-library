@@ -68,7 +68,9 @@ function MyProfileEdit({ user, setUser }) {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         ></input>
-        <button type="submit"><Link to={`/my-profile/${user.first_name}${user.last_name}`}>All Done!</Link></button>
+        <button type="submit" onClick={() => {alert(
+              "Your profile has been updated!"
+            )}}>All Done!</button>
       </form>
       {user.is_contributor === true? null : <form onSubmit={handlePendCont}>
         <label>Want to become a contributor? </label>
