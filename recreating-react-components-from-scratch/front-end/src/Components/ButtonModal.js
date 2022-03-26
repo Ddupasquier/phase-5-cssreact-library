@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from "react";
-function CodeModal({ allComps, user }) {
+import * as BsIcon from "react-icons/bs";
+
+function CodeModal({ allComps, user, userFav, setUserFav }) {
   const [shown, setShown] = useState(false);
 
   function handleOpen() {
@@ -19,7 +21,14 @@ function CodeModal({ allComps, user }) {
         user_id: user.id,
         component_id: e.target.value,
       }),
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .then((newFav) => setUserFav(newFav));
+  }
+
+  function checkLoginFav() {
+    if (!user) {
+      alert("You must log in to favorite a component!")}
   }
 
   let filterButton = allComps.filter((b) => b.name.includes("btn"));
@@ -28,10 +37,24 @@ function CodeModal({ allComps, user }) {
       <Fragment key={b.id}>
         {" "}
         <div className="each-block">
-          <h1>{b.name}{" "}<button onClick={addToFav} value={b.id} className="btn14 each-block-button">
-            Fav
-          </button></h1>{" "}
-          
+          {userFav.find((f) => f.component_id === b.id) ? (
+            <div className="btn15 each-block-button" onClick={checkLoginFav()}>
+              <BsIcon.BsSuitHeartFill />
+            </div>
+          ) : (
+            <h1>
+              {b.name}{" "}
+              {user === null ? (
+                <button
+                  onClick={() => !user ? null : {addToFav}}
+                  value={b.id}
+                  className="btn14 each-block-button"
+                >
+                  <BsIcon.BsSuitHeart />
+                </button>
+              ) : null}
+            </h1>
+          )}
           <br />
           <b>HTML:</b>
           <br />

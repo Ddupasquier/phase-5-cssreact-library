@@ -17,6 +17,17 @@ import ADMIN from "./Components/ADMIN";
 function App() {
   const [user, setUser] = useState(localStorage.getItem("user") || null);
   const [allComps, setAllComps] = useState(localStorage.getItem("components") || null)
+  const [userFav, setUserFav] = useState([]);
+
+  // console.log(userFav)
+
+  useEffect(() => {
+    fetch(`/current_user_fav`)
+      .then((r) => r.json())
+      .then((favData) => {
+        setUserFav(favData);
+      });
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("user", user);
@@ -49,13 +60,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/modals" element={<ModalSimple />} />
-        <Route path="/buttons" element={<Buttons allComps={allComps} user={user}/>} />
+        <Route path="/buttons" element={<Buttons allComps={allComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
         <Route path="/forms" element={<Forms />} />
         <Route path="/segments" element={<Segments />} />
         <Route path="/navs" element={<Navs />} />
         <Route
           path="/my-profile/:name"
-          element={<MyProfile user={user} setUser={setUser} />}
+          element={<MyProfile user={user} setUser={setUser} userFav={userFav} setUserFav={setUserFav} />}
         />
         <Route
           path="/edit-profile/:name"

@@ -1,17 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./my-profileedit.css";
 
-function MyProfile({ user }) {
-  const [userFav, setUserFav] = useState([]);
+function MyProfile({ user, userFav, setUserFav }) {
   const [userContrib, setUserContrib] = useState([]);
-
-  useEffect(() => {
-    fetch(`/current_user_fav`)
-      .then((r) => r.json())
-      .then((favData) => {
-        setUserFav(favData);
-      });
-  }, []);
 
   useEffect(() => {
     fetch("/current_user_components")

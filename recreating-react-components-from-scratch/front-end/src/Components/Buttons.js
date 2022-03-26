@@ -2,11 +2,11 @@ import React from "react";
 import ButtonModal from "./ButtonModal";
 import "./buttons.css";
 
-function Buttons({ allComps, user }) {
+function Buttons({ allComps, user, userFav, setUserFav }) {
   return (
     <>
       <div className="button-segment">
-        <ButtonModal allComps={allComps} user={user}/><br />
+        <ButtonModal allComps={allComps} user={user} userFav={userFav} setUserFav={setUserFav} /><br />
         <div className="segment off-white"><p>
           Just for reference, here's a completely unstyled button. Boring,
           right?
