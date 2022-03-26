@@ -4,10 +4,7 @@ import "./admin.css";
 function ADMIN({ allComps }) {
   const [allPendingSub, setPendingSub] = useState([]);
   const [allPendingCon, setPendingCon] = useState([]);
-  const [html, setHTML] = useState("");
-  const [css, setCSS] = useState("");
-  const [compFilter, setCompFilter] = useState("");
-
+  const [thisComponent, setComponent] = useState({});
 
   useEffect(() => {
     fetch("/pending_components")
@@ -25,21 +22,14 @@ function ADMIN({ allComps }) {
       });
   }, []);
 
-  const component = allComps.filter((c) => (
-    c.name.includes(compFilter)
-  ));
-  // console.log(component)
-  console.log(compFilter);
-  console.log(component[0].id)
-
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`/components/${component[0].id}`, {
+    fetch(`/components/${thisComponent.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        html,
-        css,
+        html: e.target.elements.html.value,
+        css: e.target.elements.css.value,
       }),
     }).then((res) => res.json());
   }
@@ -158,25 +148,30 @@ function ADMIN({ allComps }) {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
+            name="name"
             placeholder="Component Name"
-            value={compFilter}
-            onChange={(e) => setCompFilter(e.target.value)}
+            onChange={(e) => {
+              const comp = allComps.find((c) => c.name === e.target.value);
+              if (comp !== undefined) {
+                setComponent(comp);
+              }
+            }}
             className="contrib-input"
           ></input>
           <br />
           <textarea
+            name="html"
             type="text"
             placeholder="HTML"
-            value={component[0].html}
-            onChange={(e) => setHTML(e.target.value)}
+            defaultValue={thisComponent.html ?? ""}
             className="contrib-textarea"
           ></textarea>
           <br />
           <textarea
             type="text"
+            name="css"
             placeholder="CSS"
-            value={component[0].css}
-            onChange={(e) => setCSS(e.target.value)}
+            defaultValue={thisComponent.css ?? ""}
             className="contrib-textarea"
           ></textarea>
           <br />

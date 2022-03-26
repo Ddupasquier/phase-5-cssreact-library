@@ -6,13 +6,18 @@ import LoginForm from "./LoginForm";
 function LoginLogout({ user, setUser }) {
 
   // edit profile: show pending contrib if pending contrib
-  
   // ReadMe does not do anything
 
+// when I fav something there should be an indication right away that I succeeded. consider how instagram or twitter likes work - tap the heart or star and it fills in. tap it again and it undoes it.. leaving and revisiting the page or logging out and back in - you should still see the indication that it’s been favorited and either be able to toggle it, or at least not be able to favorite it again. you don’t have to make it toggle-able but I highly recommend it.
+// related to the above - it shouldn’t be possible to favorite the same thing twice - it should either be a favorite or not - so when I look at my profile it doesn’t show up more than once in the list
+// when not logged in I shouldn’t see fav buttons - or if I do then clicking them should trigger it to tell me to sign in or sign up
+// external links aren’t working because they’re acting as relative links. use // at the start of them and don’t include the protocol and I think that fixes it
+// Suggestions
+// the experience signing up is confusing. first - the normal thing someone would probably try is to click it before filling anything out because it looks like (and acts like) a normal login too. but then even if done correctly, if it succeeds, we simply have the sidebar disappear and nothing else happens. consider redirecting to a profile page or something
+// it’s a bit unclear as a user why I should be creating an account or what I would do with one
+// separate code blocks so I can view or copy code from one at a time. syntax highlighting and pretty formatting is nice, but not a must-have
+// I’m not sure what really happens when contributions are accepted. it doesn’t seem like they will be tied to any category, so I don’t know where they would show up, if anywhere.
 
-  // Form validation on the login form, check for empty
-
-  // add some validations
 
   function renderForm() {
     if (user !== null) {

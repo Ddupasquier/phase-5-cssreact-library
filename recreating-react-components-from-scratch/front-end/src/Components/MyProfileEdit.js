@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "./my-profileedit.css";
 
 function MyProfileEdit({ user, setUser }) {
@@ -9,6 +8,15 @@ function MyProfileEdit({ user, setUser }) {
   const [email, setEmail] = useState(user.email);
   const [phone, setPhone] = useState(user.phone);
   const [is_contributor, setIsContrib] = useState(user.is_contributor);
+  const [pendingArr, setPendingArr] = useState([]);
+
+  useEffect(() => {
+    fetch("/pending_contributors")
+      .then((r) => r.json())
+      .then((pendingCont) => {
+        setPendingArr(pendingCont);
+      });
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -33,6 +41,25 @@ function MyProfileEdit({ user, setUser }) {
 
   if (user === null) {
     return "Loading...";
+  }
+
+  function renderContributeBtn() {
+    return (
+      <>
+        <label>Want to become a contributor? </label>
+        <button
+          type="submit"
+          value={is_contributor}
+          onChange={() => setIsContrib(true)}
+        >
+          Click Here!
+        </button>
+      </>
+    );
+  }
+
+  function checkForPending() {
+    return pendingArr.filter((p) => p.user.id === user.id).length !== 0;
   }
 
   return (
@@ -68,20 +95,22 @@ function MyProfileEdit({ user, setUser }) {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         ></input>
-        <button type="submit" onClick={() => {alert(
-              "Your profile has been updated!"
-            )}}>All Done!</button>
-      </form>
-      {user.is_contributor === true? null : <form onSubmit={handlePendCont}>
-        <label>Want to become a contributor? </label>
         <button
           type="submit"
-          value={is_contributor}
-          onChange={() => setIsContrib(true)}
+          onClick={() => {
+            alert("Your profile has been updated!");
+          }}
         >
-          X
+          All Done!
         </button>
-      </form>}
+      </form>
+      {user.is_contributor === true ? null : (
+        <form onSubmit={handlePendCont}>
+          {checkForPending()
+            ? "Contributor Application Pending"
+            : renderContributeBtn()}
+        </form>
+      )}
     </div>
   );
 }

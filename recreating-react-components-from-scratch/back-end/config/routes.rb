@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   resources :user_favorites, only: [:index, :show, :create]
   # resources :comments, only: [:index, :show]
-  resources :components, only: [:index, :show, :create]
+  resources :components, only: [:index, :show, :create, :update]
   resources :users, only: [:index, :show, :create, :update]
   resources :pending_components, only: [:index, :show, :create, :destroy]
   resources :pending_contributors, only: [:index, :show, :create, :destroy]

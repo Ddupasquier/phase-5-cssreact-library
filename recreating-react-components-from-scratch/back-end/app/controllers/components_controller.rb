@@ -22,10 +22,20 @@ class ComponentsController < ApplicationController
         render json: new_component, status: :created
     end
 
+    def update
+        component = Component.find_by(id:params[:id])
+      component.update!(component_edit_param)
+      render json: component
+    end
+
     private
 
     def component_params
         params.permit(:name, :html, :css)
+    end
+
+    def component_edit_param
+        params.permit(:html, :css)
     end
 
     def find_component
