@@ -16,8 +16,15 @@ import ADMIN from "./Components/ADMIN";
 
 function App() {
   const [user, setUser] = useState(localStorage.getItem("user") || null);
-  const [allComps, setAllComps] = useState(localStorage.getItem("components") || null)
   const [userFav, setUserFav] = useState([]);
+
+  let componentDefault = [];
+  try {
+    componentDefault = JSON.parse(localStorage.getItem("component") || null);
+  } catch (error) {
+    console.log("nope")
+  }
+  const [allComps, setAllComps] = useState(componentDefault);
 
   // console.log(userFav)
 
@@ -34,7 +41,11 @@ function App() {
   }, [user]);
 
   useEffect(() => {
-    localStorage.setItem("components", allComps);
+    localStorage.setItem("this_user_favs", userFav);
+  }, [userFav]);
+
+  useEffect(() => {
+    localStorage.setItem("components", JSON.stringify(allComps));
   }, [allComps]);
 
   useEffect(() => {
@@ -55,12 +66,12 @@ function App() {
 
   return (
     <div className="App">
-      <NavbarSimple user={user} setUser={setUser} />
+      <NavbarSimple user={user} setUser={setUser} setAllComps={setAllComps} setUserFav={setUserFav} />
       <br />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/modals" element={<ModalSimple />} />
-        <Route path="/buttons" element={<Buttons allComps={allComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
+        <Route path="/buttons" element={<Buttons allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
         <Route path="/forms" element={<Forms />} />
         <Route path="/segments" element={<Segments />} />
         <Route path="/navs" element={<Navs />} />
