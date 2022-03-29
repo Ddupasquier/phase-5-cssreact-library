@@ -23,8 +23,6 @@ function App() {
   }
   const [user, setUser] = useState(userDefault);
 
-  const [userFav, setUserFav] = useState([]);
-
   let componentDefault = null;
   try {
     componentDefault = JSON.parse(localStorage.getItem("component") || null);
@@ -32,6 +30,7 @@ function App() {
     console.log("No components available")
   }
   const [allComps, setAllComps] = useState(componentDefault);
+  const [userFav, setUserFav] = useState([]);
 
   useEffect(() => {
     fetch(`/current_user_fav`)
