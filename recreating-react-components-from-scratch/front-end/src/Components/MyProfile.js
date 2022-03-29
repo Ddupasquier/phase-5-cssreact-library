@@ -12,17 +12,16 @@ function MyProfile({ user, userFav, setUserFav }) {
       });
   }, []);
 
-
   const userFavs = userFav.map((fav) => fav.component.name);
 
   const userContribs = userContrib.map((contrib) => contrib.name);
 
   if (userContrib === []) {
-    return "Loading..."
+    return "Loading...";
   }
 
   if (user === null) {
-    return "Loading..."
+    return "Loading...";
   }
 
   return (
@@ -54,7 +53,7 @@ function MyProfile({ user, userFav, setUserFav }) {
             <hr />
             <ul>
               {userFavs.map((f) => (
-                <li key={f.id}>{f}</li>
+                <li key={f}>{f}</li>
               ))}
             </ul>
             {user.is_contributor === true ? (
@@ -63,7 +62,7 @@ function MyProfile({ user, userFav, setUserFav }) {
                 <hr />
                 <ul>
                   {userContribs.map((c) => (
-                    <li key={c.id}>{c}</li>
+                    <li key={c}>{c}</li>
                   ))}
                 </ul>
               </div>

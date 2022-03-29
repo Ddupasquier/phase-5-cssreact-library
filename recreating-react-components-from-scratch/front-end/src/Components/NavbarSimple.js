@@ -111,15 +111,15 @@ function SimpleNavbar({ user, setUser }) {
           <span className="ul-title">Similar Sites</span>
           <u>
             <span>
-              <Link to="https://semantic-ui.com/" className="pop-out-button">
+              <Link to="//semantic-ui.com/" className="pop-out-button" target="_blank">
                 Semantic UI <FiIcon.FiExternalLink />
               </Link>
             </span>
             <br />
             <span>
               <Link
-                to="https://react-bootstrap.github.io/"
-                className="pop-out-button"
+                to="//react-bootstrap.github.io/"
+                className="pop-out-button" target="_blank"
               >
                 React Bootstrap <FiIcon.FiExternalLink />
               </Link>
