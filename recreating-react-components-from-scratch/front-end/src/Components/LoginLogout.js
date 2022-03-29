@@ -43,6 +43,7 @@ function LoginLogout({ user, setUser }) {
 
   function onLogout() {
     setUser(null);
+    window.location.reload(false);
   }
 
   return (

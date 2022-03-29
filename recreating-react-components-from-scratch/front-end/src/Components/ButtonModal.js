@@ -26,12 +26,6 @@ function CodeModal({ allComps, user, userFav, setUserFav }) {
       .then((newFav) => setUserFav(newFav));
   }
 
-  function checkLoginFav() {
-    if (!user) {
-      alert("You must log in to favorite a component!")}
-  }
-  
-console.log(allComps)
   let filterButton = (allComps || []).filter((b) => b.name.includes("btn"));
   const eachButton = filterButton.map((b) => {
     return (
@@ -39,15 +33,15 @@ console.log(allComps)
         {" "}
         <div className="each-block">
           {userFav.find((f) => f.component_id === b.id) ? (
-            <button className="btn15 each-block-button" onClick={checkLoginFav}>
+            <button className="btn15 each-block-button">
               <BsIcon.BsSuitHeartFill />
             </button>
           ) : (
             <h1>
               {b.name}{" "}
-              {user === null ? (
+              {user !== null ? (
                 <button
-                  onClick={() => !user ? null : {addToFav}}
+                  onClick={() => !user ? alert("You must log in to favorite a component!") : {addToFav}}
                   value={b.id}
                   className="btn14 each-block-button"
                 >

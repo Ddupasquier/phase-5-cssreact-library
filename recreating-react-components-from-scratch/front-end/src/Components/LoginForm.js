@@ -25,6 +25,7 @@ function LoginForm({ setUser }) {
           setUser(user);
         }
       });
+    // window.location.reload(false);
     setIsLogin(true);
   }
 

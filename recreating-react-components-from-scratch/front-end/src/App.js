@@ -15,18 +15,23 @@ import Contribute from "./Components/Contribute";
 import ADMIN from "./Components/ADMIN";
 
 function App() {
-  const [user, setUser] = useState(localStorage.getItem("user") || null);
+  let userDefault = null;
+  try {
+    userDefault = JSON.parse(localStorage.getItem("user") || null);
+  } catch (error) {
+    console.log("No user available")
+  }
+  const [user, setUser] = useState(userDefault);
+
   const [userFav, setUserFav] = useState([]);
 
-  let componentDefault = [];
+  let componentDefault = null;
   try {
     componentDefault = JSON.parse(localStorage.getItem("component") || null);
   } catch (error) {
-    console.log("nope")
+    console.log("No components available")
   }
   const [allComps, setAllComps] = useState(componentDefault);
-
-  // console.log(userFav)
 
   useEffect(() => {
     fetch(`/current_user_fav`)
@@ -34,15 +39,11 @@ function App() {
       .then((favData) => {
         setUserFav(favData);
       });
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("user", user);
   }, [user]);
 
   useEffect(() => {
-    localStorage.setItem("this_user_favs", userFav);
-  }, [userFav]);
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [user]);
 
   useEffect(() => {
     localStorage.setItem("components", JSON.stringify(allComps));
