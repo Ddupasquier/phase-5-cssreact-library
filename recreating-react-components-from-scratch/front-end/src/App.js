@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./Components/Home";
 import NavbarSimple from "./Components/NavbarSimple";
-import ModalSimple from "./Components/ModalSimple";
 import Buttons from "./Components/Buttons";
 import Forms from "./Components/Forms";
 import Segments from "./Components/Segments";
@@ -13,6 +12,7 @@ import MyProfile from "./Components/MyProfile";
 import MyProfileEdit from "./Components/MyProfileEdit";
 import Contribute from "./Components/Contribute";
 import ADMIN from "./Components/ADMIN";
+import Modals from "./Components/Modals";
 
 function App() {
   let userDefault = null;
@@ -83,7 +83,7 @@ function App() {
       <br />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/modals" element={<ModalSimple allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
+        <Route path="/modals" element={<Modals allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
         <Route path="/buttons" element={<Buttons allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
         <Route path="/forms" element={<Forms allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
         <Route path="/segments" element={<Segments allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />

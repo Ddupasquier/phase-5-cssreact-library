@@ -32,7 +32,7 @@ hr {
 .modals-container {
   border: 1px red solid;
   width: 95%;
-  height: 45rem;
+  height: fit-content;
   margin: auto;
   margin-top: 10vh;
   margin-bottom: 10vh;
