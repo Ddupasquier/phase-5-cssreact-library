@@ -73,7 +73,14 @@ function ModalsModal({ allComps, user, userFav, setUserFav }) {
           <h2>{b.name}</h2>
           <b>HTML:</b>
           <br />
-          {b.html}
+          {b.html.split("\n").map((v, i) => {
+            return (
+              <Fragment key={i}>
+                {v}
+                <br />
+              </Fragment>
+            );
+          })}
           <br />
           <b>CSS: </b>
           <br />
@@ -97,7 +104,7 @@ function ModalsModal({ allComps, user, userFav, setUserFav }) {
       </button>
 
       {shown === true ? (
-        <div className="overlay">
+        <div className="overlay" onClick={handleClose}>
           <div className="code-modal segment">
             <header>
               <button className="btn8" onClick={handleClose}>
