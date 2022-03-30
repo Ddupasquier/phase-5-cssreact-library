@@ -1,8 +1,8 @@
-import React, {useState, Fragment} from 'react';
+import React, { useState, Fragment } from "react";
 import * as BsIcon from "react-icons/bs";
 
-function SegmentModal({allComps, user, userFav, setUserFav}) {
-    const [shown, setShown] = useState(false);
+function SegmentModal({ allComps, user, userFav, setUserFav }) {
+  const [shown, setShown] = useState(false);
 
   function handleOpen() {
     setShown(true);
@@ -19,36 +19,42 @@ function SegmentModal({allComps, user, userFav, setUserFav}) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         user_id: user.id,
-        component_id: e.target.value,
+        component_id: e.currentTarget.value,
       }),
     })
       .then((res) => res.json())
-      .then(window.location.reload(false))
+      .then((newFav) => {
+        setUserFav([...userFav, newFav]);
+      });
   }
-
-
 
   function unfavorite(f) {
-    // console.log(f)
     fetch(`/user_favorites/${f}`, {
       method: "DELETE",
-    })
-    .then((newFavs) => setUserFav(newFavs))
-    .then(window.location.reload(false))
+    }).then(() => {
+      const newFavs = userFav.filter((aftDeleteFav) => {
+        return aftDeleteFav.id !== f;
+      });
+      setUserFav(newFavs);
+    });
   }
 
-// console.log(userFav)
   let filterButton = (allComps || []).filter((b) => b.name.includes("segment"));
+
   const eachButton = filterButton.map((b) => {
-   const fav = userFav.filter((f) => f.component_id === b.id)
-   console.log(fav)
+    const fav = (userFav || []).find((f) => f.component_id === b.id);
 
     return (
       <Fragment key={b.id}>
         {" "}
         <div className="each-block">
-          {fav.length > 0 ? (
-            <button className="btn15 each-block-button" onClick={() => {unfavorite(fav.component_id)}}>
+          {fav !== undefined ? (
+            <button
+              className="btn15 each-block-button"
+              onClick={() => {
+                unfavorite(fav.id);
+              }}
+            >
               <BsIcon.BsSuitHeartFill />
             </button>
           ) : (
@@ -58,7 +64,6 @@ function SegmentModal({allComps, user, userFav, setUserFav}) {
                   value={b.id}
                   className="btn14 each-block-button"
                   onClick={addToFav}
-                  
                 >
                   <BsIcon.BsSuitHeart />
                 </button>

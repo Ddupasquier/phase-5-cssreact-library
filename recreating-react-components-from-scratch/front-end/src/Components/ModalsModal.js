@@ -1,9 +1,8 @@
 import React, { Fragment, useState } from "react";
 import * as BsIcon from "react-icons/bs";
 
-
 function ModalsModal({ allComps, user, userFav, setUserFav }) {
-    const [shown, setShown] = useState(false);
+  const [shown, setShown] = useState(false);
 
   function handleOpen() {
     setShown(true);
@@ -20,42 +19,40 @@ function ModalsModal({ allComps, user, userFav, setUserFav }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         user_id: user.id,
-        component_id: e.target.value,
+        component_id: e.currentTarget.value,
       }),
     })
       .then((res) => res.json())
       .then((newFav) => {
         setUserFav([...userFav, newFav]);
-      })
+      });
   }
 
   function unfavorite(f) {
-    console.log(f);
     fetch(`/user_favorites/${f}`, {
       method: "DELETE",
-    })
-      .then(() => {
-        const newFavs = userFav.filter((aftDeleteFav) => {
-          return aftDeleteFav.id !== f
-        })
-        setUserFav(newFavs)
-      })
+    }).then(() => {
+      const newFavs = userFav.filter((aftDeleteFav) => {
+        return aftDeleteFav.id !== f;
+      });
+      setUserFav(newFavs);
+    });
   }
 
   let filterButton = (allComps || []).filter((b) => b.name.includes("modal"));
 
   const eachButton = filterButton.map((b) => {
-    const fav = (userFav || []).filter((f) => f.component_id === b.id);
+    const fav = (userFav || []).find((f) => f.component_id === b.id);
 
     return (
       <Fragment key={b.id}>
         {" "}
         <div className="each-block">
-          {fav.length > 0 ? (
+          {fav !== undefined ? (
             <button
               className="btn15 each-block-button"
               onClick={() => {
-                unfavorite(fav[0].id);
+                unfavorite(fav.id);
               }}
             >
               <BsIcon.BsSuitHeartFill />

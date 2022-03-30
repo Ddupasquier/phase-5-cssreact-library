@@ -29,7 +29,6 @@ function ButtonModal({ allComps, user, userFav, setUserFav }) {
   }
 
   function unfavorite(f) {
-    console.log(f);
     fetch(`/user_favorites/${f}`, {
       method: "DELETE",
     }).then(() => {
@@ -44,8 +43,7 @@ function ButtonModal({ allComps, user, userFav, setUserFav }) {
 
   const eachButton = filterButton.map((b) => {
     const fav = (userFav || []).find((f) => f.component_id === b.id);
-    console.log(fav);
-    // console.log(b);
+
     return (
       <Fragment key={b.id}>
         {" "}
