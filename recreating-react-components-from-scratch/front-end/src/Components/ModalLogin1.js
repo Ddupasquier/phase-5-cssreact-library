@@ -16,19 +16,22 @@ function ModalLogin1() {
 
   function randomButton(min, max) {
     const random = Math.floor(Math.random() * (max - min + 1) + min);
-    console.log(random)
+    console.log(random);
     return `btn${random}`;
   }
 
   return (
     <>
-      <button className={`${randomButton(3, 21)} small-margin`} onClick={handleOpen}>
+      <button
+        className={`${randomButton(3, 21)} small-margin`}
+        onClick={handleOpen}
+      >
         {"Modal - Login1"}
       </button>
 
       {shown === true ? (
         <div className="overlay" onClick={handleClose}>
-          <div className="form-login1">
+          <div className="modal-form-login1">
             <h2>Login</h2>
             <form>
               <input type="text" placeholder="Username..."></input>

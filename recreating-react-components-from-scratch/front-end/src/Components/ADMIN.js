@@ -6,6 +6,14 @@ function ADMIN({ allComps }) {
   const [allPendingCon, setPendingCon] = useState([]);
   const [thisComponent, setComponent] = useState({});
 
+
+    const styleObj = {
+      fontSize: 24,
+      color: "red",
+      textAlign: "left",
+      margin: 0,
+  }
+
   useEffect(() => {
     fetch("/pending_components")
       .then((r) => r.json())
@@ -116,8 +124,19 @@ function ADMIN({ allComps }) {
             Deny
           </button>{" "}
           <br />
-          {p.html}
+          <b><u>Submitted by: {p.user.first_name} {p.user.last_name} - {p.user.email} - {p.user.phone}</u></b>
           <br />
+          <p style={styleObj}>HTML/JSX:</p>
+          {p.html.split("\n").map((v, i) => {
+            return (
+              <Fragment key={i}>
+                {v}
+                <br />
+              </Fragment>
+            );
+          })}
+          <br />
+          <p style={styleObj}>CSS:</p>
           {css.split("\n").map((v, i) => {
             return (
               <Fragment key={i}>

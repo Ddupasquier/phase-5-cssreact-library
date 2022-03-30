@@ -4,6 +4,7 @@ html, body {
 
 body {
   background-image: url("https://www.teahub.io/photos/full/10-100334_wallpaper-abstract-black-blue-smoke-src-new-blue.jpg");
+  background-attachment: fixed;
   padding: 0;
   padding-bottom: 5vh;
 }
@@ -20,6 +21,13 @@ hr {
   border: none;
   border-top: 1px solid rgb(65, 65, 65);
   width: 90%;
+}
+
+.forms-container > hr {
+  border: none;
+  border-top: 1px solid rgb(65, 65, 65);
+  width: 90%;
+  margin: 2rem;
 }
 
 .button-segment {
@@ -54,12 +62,19 @@ hr {
   text-align: center;
 }
 
-.form-container {
+.forms-container {
   width: fit-content;
   border-radius: 5px;
   margin: auto;
   margin-top: 10vh;
   padding: 2%;
+  text-align: center;
+}
+
+.forms-container > h3 {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 .light-shadow {

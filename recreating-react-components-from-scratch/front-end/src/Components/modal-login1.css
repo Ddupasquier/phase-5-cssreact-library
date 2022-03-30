@@ -10,7 +10,7 @@
   background: rgba(0, 0, 0, 0.356);
 }
 
-.form-login1 {
+.modal-form-login1 {
   background-image: url("https://i.ibb.co/4NCGyzZ/loginform.png");
   background-position: right bottom;
   background-size: cover;
@@ -24,14 +24,14 @@
   margin: 0 auto 0 auto;
 }
 
-.form-login1 > form {
+.modal-form-login1 > form {
   background: rgba(255, 255, 255, 0.603);
   border-radius: 3px;
   margin: 5% 2% 10% 2%;
   padding: 5%;
 }
 
-.form-login1 > h2 {
+.modal-form-login1 > h2 {
   padding: 1%;
   text-align: left;
   background: rgba(0, 195, 255, 0.301);

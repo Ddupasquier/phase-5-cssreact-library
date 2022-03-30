@@ -1,40 +1,28 @@
 import React from "react";
-import "./forms.css";
+import FormLogin1 from "./FormLogin1";
+import FormLogin2 from "./FormLogin2";
+import FormSimple from "./FormSimple";
+import FormsModal from "./FormsModal";
 
-function handleChange(e) {
-  e.preventDefault();
-}
-
-function Forms() {
+function Forms({ allComps, setAllComps, user, userFav, setUserFav }) {
   return (
     <>
-      <div className="form-container charcoal">
-        <form onSubmit={handleChange}>
-          <input
-            type="text"
-            className="form-input"
-            placeholder="Username"
-          ></input>
-          <br />
-          <input
-            type="text"
-            className="form-input"
-            placeholder="Password"
-          ></input>
-          <br />
-          <input type="text" className="form-input" placeholder="Email"></input>
-          <br />
-          <input type="text" className="form-input" placeholder="Phone"></input>
-          <br />
-          <input
-            type="text"
-            className="form-input"
-            placeholder="Whatever You Want"
-          ></input>
-          <br />
-          <input type="submit" className="form-submit btn16"></input>
-          <br />
-        </form>
+      <div className="forms-container">
+        <FormsModal
+          allComps={allComps}
+          setAllComps={setAllComps}
+          user={user}
+          userFav={userFav}
+          setUserFav={setUserFav}
+        />
+        <h3>Form - Simple</h3>
+        <FormSimple />
+        <hr />
+        <h3>Form - Login1</h3>
+        <FormLogin1 />
+        <hr />
+        <h3>Form - Login2</h3>
+        <FormLogin2 />
       </div>
     </>
   );

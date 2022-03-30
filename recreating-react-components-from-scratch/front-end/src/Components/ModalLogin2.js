@@ -27,7 +27,7 @@ function ModalLogin2() {
 
       {shown === true ? (
         <div className="overlay" onClick={handleClose}>
-          <div className="form-login2">
+          <div className="modal-form-login2">
             <h2>Login</h2>
             <form>
               <input type="text" placeholder="Username..."></input>
