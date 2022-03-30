@@ -30,6 +30,13 @@ function App() {
     console.log("No components available")
   }
   const [allComps, setAllComps] = useState(componentDefault);
+
+  // let favsDefault = null;
+  // try {
+  //   favsDefault = JSON.parse(localStorage.getItem("favs") || null);
+  // } catch (error) {
+  //   console.log("No favorites available")
+  // }
   const [userFav, setUserFav] = useState([]);
 
   useEffect(() => {
@@ -47,6 +54,12 @@ function App() {
   useEffect(() => {
     localStorage.setItem("components", JSON.stringify(allComps));
   }, [allComps]);
+
+  // useEffect(() => {
+  //   localStorage.setItem("favs", JSON.stringify(userFav));
+  // }, [userFav]);
+
+  
 
   useEffect(() => {
     fetch("/me").then((response) => {
@@ -70,11 +83,11 @@ function App() {
       <br />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/modals" element={<ModalSimple />} />
+        <Route path="/modals" element={<ModalSimple allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
         <Route path="/buttons" element={<Buttons allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
-        <Route path="/forms" element={<Forms />} />
-        <Route path="/segments" element={<Segments />} />
-        <Route path="/navs" element={<Navs />} />
+        <Route path="/forms" element={<Forms allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
+        <Route path="/segments" element={<Segments allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
+        <Route path="/navs" element={<Navs allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
         <Route
           path="/my-profile/:name"
           element={<MyProfile user={user} setUser={setUser} userFav={userFav} setUserFav={setUserFav} />}

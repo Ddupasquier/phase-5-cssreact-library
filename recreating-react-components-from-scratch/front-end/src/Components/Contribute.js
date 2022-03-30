@@ -21,7 +21,7 @@ function Contribute({ user }) {
   }
 
   return (
-    <div className="contribute-container segment off-white">
+    <div className="contribute-container off-white">
       <form onSubmit={handleSubmit}>
         <input
           type="text"

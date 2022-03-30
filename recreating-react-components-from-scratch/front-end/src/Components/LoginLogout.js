@@ -6,7 +6,6 @@ import LoginForm from "./LoginForm";
 function LoginLogout({ user, setUser }) {
 
   // edit profile: show pending contrib if pending contrib
-  // ReadMe does not do anything
 
 // pertaining to fav buttons -  you should still see the indication that it’s been favorited and either be able to toggle it, or at least not be able to favorite it again. you don’t have to make it toggle-able but I highly recommend it.
 // page breaks when add fav put post goes through

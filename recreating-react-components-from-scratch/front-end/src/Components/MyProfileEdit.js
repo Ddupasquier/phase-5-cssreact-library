@@ -36,7 +36,9 @@ function MyProfileEdit({ user, setUser }) {
     fetch(`/pending_contributors`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .then(window.location.reload(false));
   }
 
   if (user === null) {

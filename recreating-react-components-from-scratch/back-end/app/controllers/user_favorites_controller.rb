@@ -24,6 +24,13 @@ class UserFavoritesController < ApplicationController
         render json: fav, status: :created
     end
 
+    def destroy
+        userfav = UserFavorite.find_by(id:params[:id])
+        userfav.destroy
+        head :no_content
+    end
+    
+
     private
 
     def find_user_fav

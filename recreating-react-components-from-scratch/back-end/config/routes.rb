@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
   
-  resources :user_favorites, only: [:index, :show, :create]
+  resources :user_favorites, only: [:index, :show, :create, :destroy]
   # resources :comments, only: [:index, :show]
   resources :components, only: [:index, :show, :create, :update]
   resources :users, only: [:index, :show, :create, :update]

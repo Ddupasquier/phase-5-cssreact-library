@@ -9,11 +9,10 @@
 }
 
 .contribute-container {
-    
-        margin-top: 15vh;
         box-sizing: border-box;
         width: fit-content;
         padding: 3%;
+        margin: 15vh auto auto auto;
         text-align: center;
-    
+        border-radius: 8px;
 }
