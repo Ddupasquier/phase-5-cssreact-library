@@ -91,8 +91,8 @@ function SegmentModal({ allComps, user, userFav, setUserFav }) {
   });
 
   return (
-    <>
-      <button className="btn8" onClick={handleOpen}>
+    <div className="">
+      <button className="btn8 code-button" onClick={handleOpen}>
         {"<code found here>"}
       </button>
 
@@ -109,7 +109,7 @@ function SegmentModal({ allComps, user, userFav, setUserFav }) {
           </div>
         </div>
       ) : null}
-    </>
+    </div>
   );
 }
 

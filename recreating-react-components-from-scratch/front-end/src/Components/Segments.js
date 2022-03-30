@@ -7,7 +7,7 @@ import SegmentModal from "./SegmentModal";
 
 function Segments({allComps, user, userFav, setUserFav}) {
   return (
-    <div className="tmb-segment">
+    <div className="segments-container">
       <SegmentModal allComps={allComps} user={user} userFav={userFav} setUserFav={setUserFav} />
       <SegmentTop />
       <SegmentMiddle />

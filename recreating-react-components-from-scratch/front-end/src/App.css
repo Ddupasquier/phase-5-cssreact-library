@@ -26,17 +26,32 @@ hr {
   width: 45rem;
   text-align: center;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 4%;
 }
 
 .modals-container {
-  border: 1px red solid;
   width: 95%;
   height: fit-content;
-  margin: auto;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin: 4% auto 1% auto;
   overflow: auto;
+  text-align: center;
+}
+
+.modal-btn-container {
+  width: 70vw;
+  padding: 1%;
+  border-radius: 5px;
+  height: fit-content;
+  margin: 1% auto 1% auto;
+}
+
+.segments-container {
+  padding: 1%;
+  border-radius: 5px;
+  width: 65vw;
+  height: fit-content;
+  margin: 3% auto 1% auto;
+  text-align: center;
 }
 
 .form-container {
@@ -63,6 +78,10 @@ hr {
   color: white;
 }
 
+.small-margin {
+  margin: .8%;
+}
+
 .code-modal {
     position: relative;
     max-width: 90%;
@@ -75,6 +94,11 @@ hr {
     word-wrap: break-word;
     text-align: left;
     overflow: auto;
+}
+
+.code-button {
+  margin: auto;
+  margin-bottom: 2%;
 }
 
 .each-block {
@@ -97,3 +121,4 @@ hr {
 .each-block:nth-child(even) {
   background-color: rgb(255, 255, 255);
 }
+

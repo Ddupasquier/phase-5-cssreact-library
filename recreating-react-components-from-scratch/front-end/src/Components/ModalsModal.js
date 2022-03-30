@@ -92,7 +92,7 @@ function ModalsModal({ allComps, user, userFav, setUserFav }) {
 
   return (
     <>
-      <button className="btn8" onClick={handleOpen}>
+      <button className="btn8 code-button" onClick={handleOpen}>
         {"<code found here>"}
       </button>
 
