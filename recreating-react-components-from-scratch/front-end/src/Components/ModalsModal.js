@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from "react";
 import * as BsIcon from "react-icons/bs";
 
-function ButtonModal({ allComps, user, userFav, setUserFav }) {
-  const [shown, setShown] = useState(false);
+
+function ModalsModal({ allComps, user, userFav, setUserFav }) {
+    const [shown, setShown] = useState(false);
 
   function handleOpen() {
     setShown(true);
@@ -41,7 +42,7 @@ function ButtonModal({ allComps, user, userFav, setUserFav }) {
       })
   }
 
-  let filterButton = (allComps || []).filter((b) => b.name.includes("btn"));
+  let filterButton = (allComps || []).filter((b) => b.name.includes("modal"));
 
   const eachButton = filterButton.map((b) => {
     const fav = (userFav || []).filter((f) => f.component_id === b.id);
@@ -115,4 +116,4 @@ function ButtonModal({ allComps, user, userFav, setUserFav }) {
   );
 }
 
-export default ButtonModal;
+export default ModalsModal;
