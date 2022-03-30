@@ -10,6 +10,7 @@ function Home() {
       could easily reference. Components that are simple to build and manage is
       my main goal. I want these components to be accessible, even to the newest
       of coders.</p>
+      <h3>If you'd like to become a contributor, feel free to create a profile and put in a request!</h3>
     </div>
   );
 }

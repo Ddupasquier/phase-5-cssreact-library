@@ -44,14 +44,14 @@ function SimpleNavbar({ user, setUser }) {
           </span>
 
           <Link
-            to={`/my-profile/{${user.first_name}${user.last_name}}`}
+            to={`/my-profile/`}
             className="pop-out-button"
           >
             View
           </Link>
 
           <Link
-            to={`/edit-profile/${user.first_name}${user.last_name}`}
+            to={`/edit-profile/`}
             className="pop-out-button"
           >
             Edit

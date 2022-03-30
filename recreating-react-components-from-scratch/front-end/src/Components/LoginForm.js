@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 function LoginForm({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState();
   const [errors, setErrors] = useState("");
+  const nav = useNavigate();
 
   function ifLogin(e) {
     e.preventDefault();
-    fetch("/login", {
+    return fetch("/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,11 +25,11 @@ function LoginForm({ setUser }) {
             "Your email address or password (or both, for that matter) is incorrect!"
           );
         } else {
+          // try setting to local storage on login
           setUser(user);
+          setIsLogin(true);
         }
       });
-    // window.location.reload(false);
-    setIsLogin(true);
   }
 
   function ifSignup(e) {
@@ -43,7 +46,7 @@ function LoginForm({ setUser }) {
       body: JSON.stringify(user),
     }).then((res) => {
       if (res.ok) {
-        res.json().then(ifLogin(e));
+        ifLogin(e).then(() => nav(`/edit-profile/`));
       } else {
         res
           .json()

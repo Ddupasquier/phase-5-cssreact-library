@@ -30,13 +30,6 @@ function App() {
     console.log("No components available")
   }
   const [allComps, setAllComps] = useState(componentDefault);
-
-  // let favsDefault = null;
-  // try {
-  //   favsDefault = JSON.parse(localStorage.getItem("favs") || null);
-  // } catch (error) {
-  //   console.log("No favorites available")
-  // }
   const [userFav, setUserFav] = useState([]);
 
   useEffect(() => {
@@ -54,12 +47,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("components", JSON.stringify(allComps));
   }, [allComps]);
-
-  // useEffect(() => {
-  //   localStorage.setItem("favs", JSON.stringify(userFav));
-  // }, [userFav]);
-
-  
 
   useEffect(() => {
     fetch("/me").then((response) => {
@@ -89,11 +76,11 @@ function App() {
         <Route path="/segments" element={<Segments allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
         <Route path="/navs" element={<Navs allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
         <Route
-          path="/my-profile/:name"
+          path="/my-profile/"
           element={<MyProfile user={user} setUser={setUser} userFav={userFav} setUserFav={setUserFav} />}
         />
         <Route
-          path="/edit-profile/:name"
+          path="/edit-profile/"
           element={<MyProfileEdit user={user} setUser={setUser} />}
         />
         <Route path="/contribute" element={<Contribute user={user} />} />

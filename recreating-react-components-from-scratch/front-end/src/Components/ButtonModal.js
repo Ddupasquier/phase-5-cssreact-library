@@ -19,44 +19,45 @@ function ButtonModal({ allComps, user, userFav, setUserFav }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         user_id: user.id,
-        component_id: e.target.value,
+        component_id: e.currentTarget.value,
       }),
     })
       .then((res) => res.json())
       .then((newFav) => {
         setUserFav([...userFav, newFav]);
-      })
+      });
   }
 
   function unfavorite(f) {
     console.log(f);
     fetch(`/user_favorites/${f}`, {
       method: "DELETE",
-    })
-      .then(() => {
-        const newFavs = userFav.filter((aftDeleteFav) => {
-          return aftDeleteFav.id !== f
-        })
-        setUserFav(newFavs)
-      })
+    }).then(() => {
+      const newFavs = userFav.filter((aftDeleteFav) => {
+        return aftDeleteFav.id !== f;
+      });
+      setUserFav(newFavs);
+    });
   }
 
   let filterButton = (allComps || []).filter((b) => b.name.includes("btn"));
 
   const eachButton = filterButton.map((b) => {
-    const fav = (userFav || []).filter((f) => f.component_id === b.id);
-
+    const fav = (userFav || []).find((f) => f.component_id === b.id);
+    console.log(fav);
+    // console.log(b);
     return (
       <Fragment key={b.id}>
         {" "}
         <div className="each-block">
-          {fav.length > 0 ? (
+          {fav !== undefined ? (
             <button
               className="btn15 each-block-button"
               onClick={() => {
-                unfavorite(fav[0].id);
+                unfavorite(fav.id);
               }}
             >
+              {/* ❤️ */}
               <BsIcon.BsSuitHeartFill />
             </button>
           ) : (
@@ -67,6 +68,7 @@ function ButtonModal({ allComps, user, userFav, setUserFav }) {
                   className="btn14 each-block-button"
                   onClick={addToFav}
                 >
+                  {/* ♡ */}
                   <BsIcon.BsSuitHeart />
                 </button>
               ) : null}

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./my-profileedit.css";
 
 function MyProfileEdit({ user, setUser }) {
-  const [first_name, setFirstName] = useState(user.first_name);
-  const [last_name, setLastName] = useState(user.last_name);
+  const [first_name, setFirstName] = useState(user.first_name || "user");
+  const [last_name, setLastName] = useState(user.last_name || "");
   const [img, setImg] = useState(user.img);
   const [email, setEmail] = useState(user.email);
   const [phone, setPhone] = useState(user.phone);
