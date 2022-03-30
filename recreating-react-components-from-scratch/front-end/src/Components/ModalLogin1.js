@@ -16,12 +16,13 @@ function ModalLogin1() {
 
   function randomButton(min, max) {
     const random = Math.floor(Math.random() * (max - min + 1) + min);
+    console.log(random)
     return `btn${random}`;
   }
 
   return (
     <>
-      <button className={randomButton(3, 18)} onClick={handleOpen}>
+      <button className={`${randomButton(3, 21)} small-margin`} onClick={handleOpen}>
         {"Modal - Login1"}
       </button>
 

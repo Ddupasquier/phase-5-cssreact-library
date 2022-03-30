@@ -1,5 +1,6 @@
 import React from "react";
 import ModalLogin1 from "./ModalLogin1";
+import ModalLogin2 from "./ModalLogin2";
 import ModalSimple from "./ModalSimple";
 import ModalsModal from "./ModalsModal";
 
@@ -17,6 +18,7 @@ function Modals({ allComps, setAllComps, user, userFav, setUserFav }) {
       <div className="modal-btn-container light-grey">
         <ModalSimple />
         <ModalLogin1 />
+        <ModalLogin2 />
       </div>
     </div>
   );

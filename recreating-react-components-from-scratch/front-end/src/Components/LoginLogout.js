@@ -4,18 +4,6 @@ import "./login-logout.css";
 import LoginForm from "./LoginForm";
 
 function LoginLogout({ user, setUser }) {
-
-// make html render line breaks
-
-// in login form, nav redirect (when set to edit profile) breaks
-// gives error for unmounted component
-// state is not setting instantaneously. only on refresh
-
-// it’s a bit unclear as a user why I should be creating an account or what I would do with one
-// separate code blocks so I can view or copy code from one at a time. syntax highlighting and pretty formatting is nice, but not a must-have
-// I’m not sure what really happens when contributions are accepted. it doesn’t seem like they will be tied to any category, so I don’t know where they would show up, if anywhere.
-
-
   function renderForm() {
     if (user !== null) {
       return (

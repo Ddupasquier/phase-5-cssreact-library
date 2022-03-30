@@ -1,0 +1,44 @@
+.overlay {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.356);
+  }
+  
+  .form-login2 {
+    background-image: url("https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    position: absolute;
+    height: 19rem;
+    width: 20rem;
+    color: rgb(0, 0, 0);
+    padding: 0 0 1.1% 0;
+    top: 5%;
+    right: 5%;
+    margin: 0 auto 0 auto;
+  }
+  
+  .form-login2 > form {
+    background: rgba(255, 255, 255, 0.603);
+    border-radius: 3px;
+    margin: 39.5% 2% 0 2%;
+    padding: 5%;
+  }
+  
+  .form-login2 > h2 {
+    padding: 1%;
+    padding-right: 3rem;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(209, 209, 209);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  

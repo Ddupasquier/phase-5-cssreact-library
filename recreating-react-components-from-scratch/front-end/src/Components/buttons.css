@@ -353,11 +353,11 @@
 }
 
 .btn19:active {
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0)
-      ),
-      linear-gradient(90deg, #00ff62, #7700ff);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #00ff62, #7700ff);
 }
 
 /* New Button */
