@@ -98,10 +98,10 @@ function SimpleNavbar({ user, setUser }) {
           <Link to="/forms" className="pop-out-button">
             Forms
           </Link>
-
-          <Link to="/navs" className="pop-out-button">
+{/* THIS TO BE ADDED LATER */}
+          {/* <Link to="/navs" className="pop-out-button">
             Navs
-          </Link>
+          </Link> */}
 
           <hr />
           <span className="ul-title">Similar Sites</span>
