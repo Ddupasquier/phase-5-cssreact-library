@@ -15,7 +15,7 @@ development:
   <<: *default
   username: reactcss_library
   host: localhost
-  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") { '' } %>
   # database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
