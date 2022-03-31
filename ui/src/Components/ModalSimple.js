@@ -19,7 +19,10 @@ function ModalSimple() {
 
   return (
     <>
-      <button className={`${randomButton(3, 21)} small-margin`} onClick={handleOpen}>
+      <button
+        className={`${randomButton(3, 21)} small-margin`}
+        onClick={handleOpen}
+      >
         {"Modal - Simple"}
       </button>
 

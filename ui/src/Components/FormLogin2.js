@@ -1,7 +1,12 @@
 import React from "react";
-import "./form-login2.css"
+import "./form-login2.css";
 
 function FormLogin2() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    // fetch code here
+  }
+
   return (
     <div className="form-login2">
       <h2>Login</h2>

@@ -1,10 +1,10 @@
 import React from "react";
-import "./form-login1.css"
+import "./form-login1.css";
 
 function FormLogin1() {
-
   function handleSubmit(e) {
     e.preventDefault();
+    // fetch code here
   }
 
   return (

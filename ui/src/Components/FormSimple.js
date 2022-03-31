@@ -1,9 +1,10 @@
 import React from "react";
-import "./form-simple.css"
+import "./form-simple.css";
 
 function FormSimple() {
   function handleChange(e) {
     e.preventDefault();
+    // Fetch code here
   }
 
   return (
