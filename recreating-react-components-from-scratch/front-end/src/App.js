@@ -19,7 +19,7 @@ function App() {
   try {
     userDefault = JSON.parse(localStorage.getItem("user") || null);
   } catch (error) {
-    console.log("No user available")
+    console.log("No user available");
   }
   const [user, setUser] = useState(userDefault);
 
@@ -27,7 +27,7 @@ function App() {
   try {
     componentDefault = JSON.parse(localStorage.getItem("component") || null);
   } catch (error) {
-    console.log("No components available")
+    console.log("No components available");
   }
   const [allComps, setAllComps] = useState(componentDefault);
   const [userFav, setUserFav] = useState([]);
@@ -57,27 +57,94 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch('/components')
-    .then((r) => r.json())
-    .then((comp) => {
-      setAllComps(comp)
-    })
-  }, [])
+    fetch("/components")
+      .then((r) => r.json())
+      .then((comp) => {
+        setAllComps(comp);
+      });
+  }, []);
 
   return (
     <div className="App">
-      <NavbarSimple user={user} setUser={setUser} setAllComps={setAllComps} setUserFav={setUserFav} />
+      <NavbarSimple
+        user={user}
+        setUser={setUser}
+        setAllComps={setAllComps}
+        setUserFav={setUserFav}
+      />
       <br />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/modals" element={<Modals allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
-        <Route path="/buttons" element={<Buttons allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
-        <Route path="/forms" element={<Forms allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
-        <Route path="/segments" element={<Segments allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
-        <Route path="/navs" element={<Navs allComps={allComps} setAllComps={setAllComps} user={user} userFav={userFav} setUserFav={setUserFav} />} />
+        <Route
+          path="/modals"
+          element={
+            <Modals
+              allComps={allComps}
+              setAllComps={setAllComps}
+              user={user}
+              userFav={userFav}
+              setUserFav={setUserFav}
+            />
+          }
+        />
+        <Route
+          path="/buttons"
+          element={
+            <Buttons
+              allComps={allComps}
+              setAllComps={setAllComps}
+              user={user}
+              userFav={userFav}
+              setUserFav={setUserFav}
+            />
+          }
+        />
+        <Route
+          path="/forms"
+          element={
+            <Forms
+              allComps={allComps}
+              setAllComps={setAllComps}
+              user={user}
+              userFav={userFav}
+              setUserFav={setUserFav}
+            />
+          }
+        />
+        <Route
+          path="/segments"
+          element={
+            <Segments
+              allComps={allComps}
+              setAllComps={setAllComps}
+              user={user}
+              userFav={userFav}
+              setUserFav={setUserFav}
+            />
+          }
+        />
+        <Route
+          path="/navs"
+          element={
+            <Navs
+              allComps={allComps}
+              setAllComps={setAllComps}
+              user={user}
+              userFav={userFav}
+              setUserFav={setUserFav}
+            />
+          }
+        />
         <Route
           path="/my-profile/"
-          element={<MyProfile user={user} setUser={setUser} userFav={userFav} setUserFav={setUserFav} />}
+          element={
+            <MyProfile
+              user={user}
+              setUser={setUser}
+              userFav={userFav}
+              setUserFav={setUserFav}
+            />
+          }
         />
         <Route
           path="/edit-profile/"

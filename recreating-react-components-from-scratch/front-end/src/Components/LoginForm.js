@@ -25,7 +25,6 @@ function LoginForm({ setUser }) {
             "Your email address or password (or both, for that matter) is incorrect!"
           );
         } else {
-          // try setting to local storage on login
           setUser(user);
           setIsLogin(true);
         }
