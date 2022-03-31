@@ -10,7 +10,7 @@ function FormLogin2() {
   return (
     <div className="form-login2">
       <h2>Login</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Username..."></input>
         <input type="text" placeholder="Password..."></input>
         <input type="submit" className="btn19"></input>

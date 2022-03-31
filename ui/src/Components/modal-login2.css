@@ -28,17 +28,21 @@
   .modal-form-login2 > form {
     background: rgba(255, 255, 255, 0.603);
     border-radius: 3px;
-    margin: 39.5% 2% 0 2%;
+    margin: 42% 2% 0 2%;
     padding: 5%;
   }
   
   .modal-form-login2 > h2 {
-    padding: 1%;
-    padding-right: 3rem;
-    text-align: right;
+    position: relative;
+    top: 49%;
+    padding-left: 1rem;
+    text-align: left;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(209, 209, 209);
+    color: rgb(0, 0, 0);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
   
+  .modal-form-login2 > .close-button {
+    float: right;
+  }

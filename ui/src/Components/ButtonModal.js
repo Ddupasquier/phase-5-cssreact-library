@@ -106,7 +106,7 @@ function ButtonModal({ allComps, user, userFav, setUserFav }) {
       </button>
 
       {shown === true ? (
-        <div className="overlay" onClick={handleClose}>
+        <div className="overlay">
           <div className="code-modal segment">
             <header>
               <button className="btn8" onClick={handleClose}>

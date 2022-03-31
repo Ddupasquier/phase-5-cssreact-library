@@ -38,3 +38,7 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+
+.modal-form-login1 > h2 > .close-button {
+  float: right;
+}
