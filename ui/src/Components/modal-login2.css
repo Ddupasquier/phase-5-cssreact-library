@@ -1,48 +1,48 @@
 .overlay {
-    position: absolute;
-    text-align: center;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.356);
-  }
-  
-  .modal-form-login2 {
-    background-image: url("https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg");
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px;
-    position: absolute;
-    height: 19rem;
-    width: 20rem;
-    color: rgb(0, 0, 0);
-    padding: 0 0 1.1% 0;
-    top: 5%;
-    right: 5%;
-    margin: 0 auto 0 auto;
-  }
-  
-  .modal-form-login2 > form {
-    background: rgba(255, 255, 255, 0.603);
-    border-radius: 3px;
-    margin: 42% 2% 0 2%;
-    padding: 5%;
-  }
-  
-  .modal-form-login2 > h2 {
-    position: relative;
-    top: 49%;
-    padding-left: 1rem;
-    text-align: left;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(0, 0, 0);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  
-  .modal-form-login2 > .close-button {
-    float: right;
-  }
+  position: absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.356);
+}
+
+.modal-form-login2 {
+  background-image: url("https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  position: absolute;
+  height: 19rem;
+  width: 20rem;
+  color: rgb(0, 0, 0);
+  padding: 0 0 1.1% 0;
+  top: 5%;
+  right: 5%;
+  margin: 0 auto 0 auto;
+}
+
+.modal-form-login2 > form {
+  background: rgba(255, 255, 255, 0.603);
+  border-radius: 3px;
+  margin: 42% 2% 0 2%;
+  padding: 5%;
+}
+
+.modal-form-login2 > h2 {
+  position: relative;
+  top: 49%;
+  padding-left: 1rem;
+  text-align: left;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(0, 0, 0);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-form-login2 > .close-button {
+  float: right;
+}

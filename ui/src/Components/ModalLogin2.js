@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./modal-login2.css";
 
 function ModalLogin2() {
-    // This is a React component
+  // This is a React component
   // You must import useState for this component to function
   const [shown, setShown] = useState(false);
 
@@ -21,14 +21,19 @@ function ModalLogin2() {
 
   return (
     <>
-      <button className={`${randomButton(3, 21)} small-margin`} onClick={handleOpen}>
+      <button
+        className={`${randomButton(3, 21)} small-margin`}
+        onClick={handleOpen}
+      >
         {"Modal - Login2"}
       </button>
 
       {shown === true ? (
-        <div className="overlay" onClick={handleClose}>
+        <div className="overlay">
           <div className="modal-form-login2">
-          <button className="btn4 close-button" onClick={handleClose}>X</button>
+            <button className="btn4 close-button" onClick={handleClose}>
+              X
+            </button>
             <h2>Login</h2>
             <form>
               <input type="text" placeholder="Username..."></input>
