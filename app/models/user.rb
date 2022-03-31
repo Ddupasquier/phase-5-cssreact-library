@@ -6,5 +6,5 @@ class User < ApplicationRecord
     has_many :favorited_components, through: :user_favorites, source: :component 
     
     validates :email, uniqueness: true
-    validates :email, :password, presence: true
+    validates :email, presence: true
 end
