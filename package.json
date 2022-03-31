@@ -1,1 +1,13 @@
-{}
+{
+    "name": "react css library",
+    "description": "Build scripts for Heroku",
+    "engines": {
+      "node": "16.x"
+    },
+    "scripts": {
+      "build": "npm install --prefix front-end && npm run build --prefix front-end",
+      "clean": "rm -rf public",
+      "deploy": "cp -a front-end/build/. public/",
+      "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
+    }
+  }
