@@ -5,9 +5,9 @@
       "node": "16.x"
     },
     "scripts": {
-      "build": "npm install --prefix front-end && npm run build --prefix front-end",
+      "build": "npm install --prefix ui && npm run build --prefix ui",
       "clean": "rm -rf public",
-      "deploy": "cp -a front-end/build/. public/",
+      "deploy": "cp -a ui/build/. public/",
       "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
     }
   }
