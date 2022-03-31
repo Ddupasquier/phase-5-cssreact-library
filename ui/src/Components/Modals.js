@@ -16,6 +16,7 @@ function Modals({ allComps, setAllComps, user, userFav, setUserFav }) {
       />
       <br />
       <div className="modal-btn-container light-grey">
+        Click The Buttons To See The Assorted Modals<br />
         <ModalSimple />
         <ModalLogin1 />
         <ModalLogin2 />

@@ -15,14 +15,14 @@ function Forms({ allComps, setAllComps, user, userFav, setUserFav }) {
           userFav={userFav}
           setUserFav={setUserFav}
         />
-        <h3>Form - Simple</h3>
-        <FormSimple />
+        <h3>Form - Simple
+        <FormSimple /></h3>
         <hr />
-        <h3>Form - Login1</h3>
-        <FormLogin1 />
+        <h3>Form - Login1
+        <FormLogin1 /></h3>
         <hr />
-        <h3>Form - Login2</h3>
-        <FormLogin2 />
+        <h3>Form - Login2
+        <FormLogin2 /></h3>
       </div>
     </>
   );
