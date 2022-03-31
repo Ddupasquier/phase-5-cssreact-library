@@ -39,7 +39,6 @@ function ButtonModal({ allComps, user, userFav, setUserFav }) {
     });
   }
 
-
   let filterButton = (allComps || []).filter((b) => b.name.includes("btn"));
 
   const eachButton = filterButton.map((b) => {
@@ -98,7 +97,7 @@ function ButtonModal({ allComps, user, userFav, setUserFav }) {
         </div>
       </Fragment>
     );
-  }).sort();
+  });
 
   return (
     <>
