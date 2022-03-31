@@ -6,13 +6,12 @@ function ADMIN({ allComps }) {
   const [allPendingCon, setPendingCon] = useState([]);
   const [thisComponent, setComponent] = useState({});
 
-
-    const styleObj = {
-      fontSize: 24,
-      color: "red",
-      textAlign: "left",
-      margin: 0,
-  }
+  const styleObj = {
+    fontSize: 24,
+    color: "red",
+    textAlign: "left",
+    margin: 0,
+  };
 
   useEffect(() => {
     fetch("/pending_components")
@@ -39,7 +38,8 @@ function ADMIN({ allComps }) {
         html: e.target.elements.html.value,
         css: e.target.elements.css.value,
       }),
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
   }
 
   function handleDelete(p) {
@@ -124,7 +124,12 @@ function ADMIN({ allComps }) {
             Deny
           </button>{" "}
           <br />
-          <b><u>Submitted by: {p.user.first_name} {p.user.last_name} - {p.user.email} - {p.user.phone}</u></b>
+          <b>
+            <u>
+              Submitted by: {p.user.first_name} {p.user.last_name} -{" "}
+              {p.user.email} - {p.user.phone}
+            </u>
+          </b>
           <br />
           <p style={styleObj}>HTML/JSX:</p>
           {p.html.split("\n").map((v, i) => {
@@ -150,6 +155,10 @@ function ADMIN({ allComps }) {
     );
   });
 
+  function newFunction() {
+    document.getElementById("edit-form").reset();
+ }
+
   return (
     <div className="admin-container">
       <div className="pending-sub">
@@ -164,7 +173,7 @@ function ADMIN({ allComps }) {
       </div>
       {/* patch form */}
       <div className="code-patch-form segment off-white">
-        <form onSubmit={handleSubmit}>
+        <form id="edit-form" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
@@ -194,7 +203,8 @@ function ADMIN({ allComps }) {
             className="contrib-textarea"
           ></textarea>
           <br />
-          <button type="submit">All Done!</button>
+          <button type="submit">All Done!</button><br />
+          <button className="clear" type="button" onClick={newFunction} value="Reset">CLEAR FORM</button>
         </form>
       </div>
     </div>

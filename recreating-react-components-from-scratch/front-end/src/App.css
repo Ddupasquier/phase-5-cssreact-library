@@ -23,25 +23,21 @@ hr {
   width: 90%;
 }
 
-.forms-container > hr {
-  border: none;
-  border-top: 1px solid rgb(65, 65, 65);
-  width: 90%;
-  margin: 2rem;
-}
-
 .button-segment {
-  width: 45rem;
-  text-align: center;
+  width: 80%;
+  border-radius: 5px;
   margin: auto;
-  margin-top: 4%;
+  margin-top: 10vh;
+  padding: 2%;
+  text-align: center;
 }
 
 .modals-container {
-  width: 95%;
-  height: fit-content;
-  margin: 4% auto 1% auto;
-  overflow: auto;
+  width: fit-content;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10vh;
+  padding: 2%;
   text-align: center;
 }
 
@@ -54,11 +50,11 @@ hr {
 }
 
 .segments-container {
-  padding: 1%;
+  width: fit-content;
   border-radius: 5px;
-  width: 65vw;
-  height: fit-content;
-  margin: 3% auto 1% auto;
+  margin: auto;
+  margin-top: 10vh;
+  padding: 2%;
   text-align: center;
 }
 
@@ -77,8 +73,24 @@ hr {
   padding: 1rem;
 }
 
+.forms-container > hr {
+  border: none;
+  border-top: 1px solid rgb(65, 65, 65);
+  width: 90%;
+  margin: 2rem;
+}
+
+.navs-container {
+  width: fit-content;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10vh;
+  padding: 2%;
+  text-align: center;
+}
+
 .light-shadow {
-  box-shadow: 5px 5px 15px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.377);
 }
 
 .med-shadow {

@@ -7,7 +7,7 @@ function Buttons({ allComps, user, userFav, setUserFav }) {
     <>
       <div className="button-segment">
         <ButtonModal allComps={allComps} user={user} userFav={userFav} setUserFav={setUserFav} /><br />
-        <div className="segment off-white"><p>
+        <div className="segment off-white light-shadow"><p>
           Just for reference, here's a completely unstyled button. Boring,
           right?
         </p>
@@ -23,14 +23,14 @@ function Buttons({ allComps, user, userFav, setUserFav }) {
         <button className="button btn7">Classy Grey w/focus (btn7)</button>
         <button className="button btn8">Classy Black w/focus (btn8)</button>
         <br />
-        <div className="light-grey top-segment">
+        <div className="light-grey top-segment light-shadow">
           <button className="button btn9">Button (btn9)</button>
           <button className="button btn10">Button (btn10)</button>
           <button className="button btn11">Button (btn11)</button>
           <button className="button btn12">Button (btn12)</button>
           <button className="button btn13">Button (btn13)</button>
         </div>
-        <div className="charcoal bottom-segment">
+        <div className="charcoal bottom-segment light-shadow">
           <button className="button btn9">Button (btn9)</button>
           <button className="button btn10">Button (btn10)</button>
           <button className="button btn11">Button (btn11)</button>
@@ -43,7 +43,7 @@ function Buttons({ allComps, user, userFav, setUserFav }) {
           <button className="button btn17">Button (btn17)</button>
           <button className="button btn18">Button (btn18)</button>
         </div>
-        <div className="segment off-white">
+        <div className="segment off-white light-shadow">
           <button className="button btn19">Gradient Button (btn19)</button>
           <button className="button btn20">Gradient Button (btn20)</button>
           <button className="button btn21">Gradient Button (btn21)</button>

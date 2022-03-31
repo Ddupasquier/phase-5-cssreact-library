@@ -1,27 +1,23 @@
 .admin-container {
   display: grid;
+  background: rgba(209, 209, 209, 0.726);
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto;
   margin: auto;
   margin-top: 15vh;
-  /* border: 1px solid red; */
   width: fit-content;
 }
 
 .pending-sub {
   width: 40vw;
-  border: 1px solid red;
+  border: 1px solid rgb(0, 0, 0);
   overflow: auto;
 }
 
 .pending-cont {
   width: 40vw;
-  border: 1px solid red;
+  border: 1px solid rgb(0, 0, 0);
   overflow: auto;
-}
-
-.code-block {
-  background: rgba(255, 255, 255, 0.726);
 }
 
 .approve {
@@ -34,5 +30,9 @@
 
 .code-patch-form {
   grid-column: span 2;
-  border: 1px red solid;
+  border: 1px rgb(0, 0, 0) solid;
+}
+
+.clear {
+  float: right;
 }
