@@ -1,7 +1,7 @@
 .my-profile {
     display: grid;
     grid-template-columns: 60% 40%;
-    height: 30rem;
+    height: 35rem;
     margin-top: 15vh;
     padding: 1rem;
     box-sizing: border-box;
@@ -25,7 +25,7 @@
 }
 
 .favorites {
-    height: 100%;
+    height: 97%;
     padding: 2%;
     margin-left: .6rem;
     color: white;
