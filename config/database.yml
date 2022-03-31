@@ -8,14 +8,14 @@ default: &default
   adapter: postgresql
   encoding: unicode
   database: reactcss_library
-  username: reactcss_library
-  host: localhost
-  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
   timeout: 5000
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
+  username: reactcss_library
+  host: localhost
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
   # database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
