@@ -1,0 +1,830 @@
+name,html,user_id
+btn1,"<button className=""button btn1"">Simple No CSS Button (b1)</button>",""
+btn2,"<button className=""button btn2"">BIGREDBUTTON (b2)</button>",".button {
+margin: .5rem;
+cursor: pointer;
+}
+
+.btn2 {
+background: rgb(214, 0, 0);
+border: none;
+border-radius: 7px;
+box-shadow: 5px 5px 10px;
+font-size: 2rem;
+padding: 0;
+cursor: pointer;
+}"
+btn3,"<button className=""button btn3"">Classy Blue (b3)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn3 {
+    background: rgb(66, 138, 221);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    padding: .5rem 1rem .5rem 1rem;
+    cursor: pointer;
+}
+
+.btn3:hover {
+    background: rgb(60, 125, 199);
+}
+
+.btn3:active {
+    background: rgb(66, 138, 221);
+}"
+btn4,"<button className=""button btn4"">Classy Grey (b4)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn4 {
+    background: rgb(197, 197, 197);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    padding: .5rem 1rem .5rem 1rem;
+    cursor: pointer;
+}
+
+.btn4:hover {
+    background: rgb(179, 179, 179);
+}
+
+.btn4:active {
+    background: rgb(197, 197, 197);
+}"
+btn5,"<button className=""button btn5"">Classy Black (btn5)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn5 {
+    background: rgb(43, 43, 43);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    padding: .5rem 1rem .5rem 1rem;
+    cursor: pointer;
+}
+
+.btn5:hover {
+    background: rgb(66, 66, 66);
+}
+
+.btn5:active {
+    background: rgb(43, 43, 43);
+}"
+btn6,"<button className=""button btn6"">Classy Blue w/focus (b6)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn6 {
+    background: rgb(66, 138, 221);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    padding: .5rem 1rem .5rem 1rem;
+    cursor: pointer;
+}
+
+.btn6:hover, .btn6:focus {
+    background: rgb(60, 125, 199);
+}
+
+.btn6:active {
+    background: rgb(48, 99, 156);
+}"
+btn7,"<button className=""button btn7"">Classy Grey w/focus (b7)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn7 {
+    background: rgb(197, 197, 197);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    padding: .5rem 1rem .5rem 1rem;
+    cursor: pointer;
+}
+
+.btn7:hover, .btn7:focus {
+    background: rgb(179, 179, 179);
+}
+
+.btn7:active {
+    background: rgb(145, 145, 145);
+}"
+btn8,"<button className=""button btn8"">Classy Black w/focus (b8)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn8 {
+    background: rgb(43, 43, 43);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    padding: .5rem 1rem .5rem 1rem;
+    cursor: pointer;
+}
+
+.btn8:hover, .btn8:focus {
+    background: rgb(66, 66, 66);
+}
+
+.btn8:active {
+    background: rgb(88, 88, 88);
+}"
+btn9,"<button className=""button btn9"">Button (b9)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn9 {
+    border: 2px solid rgb(255, 0, 200);
+    border-radius: 4px;
+    background: none;
+    color: rgb(255, 0, 200);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn9:active {
+    border: 2px solid rgb(196, 0, 153);
+    color: rgb(196, 0, 153);
+}"
+btn10,"<button className=""button btn10"">Button (b10)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn10 {
+    border: 2px solid rgb(9, 255, 0);
+    border-radius: 4px;
+    background: none;
+    color: rgb(9, 255, 0);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn10:active {
+    border: 2px solid rgb(0, 196, 10);
+    color: rgb(0, 196, 10);
+}"
+btn11,"<button className=""button btn11"">Button (b11)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn11 {
+    border: 2px solid rgb(0, 247, 255);
+    border-radius: 4px;
+    background: none;
+    color: rgb(0, 247, 255);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn11:active {
+    border: 2px solid rgb(0, 194, 201);
+    color: rgb(0, 194, 201);
+}"
+btn12,"<button className=""button btn12"">Button (b12)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn12 {
+    border: 2px solid rgb(251, 255, 0);
+    border-radius: 4px;
+    background: none;
+    color: rgb(251, 255, 0);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn12:active {
+    border: 2px solid rgb(214, 211, 0);
+    color: rgb(214, 211, 0);
+}"
+btn13,"<button className=""button btn13"">Button (b13)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn13 {
+    border: 2px solid rgb(140, 0, 255);
+    border-radius: 4px;
+    background: none;
+    color: rgb(140, 0, 255);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn13:active {
+    border: 2px solid rgb(91, 0, 165);
+    color: rgb(91, 0, 165);
+}"
+btn14,"<button className=""button btn14"">Button (b14)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn14 {
+    border: 2px solid rgb(140, 0, 255);
+    border-radius: 4px;
+    background: none;
+    color: rgb(140, 0, 255);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn14:active {
+    border: 2px solid rgb(91, 0, 165);
+    color: rgb(91, 0, 165);
+}"
+btn15,"<button className=""button btn15"">Button (b15)</button>b",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn15 {
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 4px;
+    background: none;
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn15:hover, .btn15:focus {
+    border: 2px solid rgb(9, 255, 0);
+    background: rgb(9, 255, 0);
+    color: rgb(231, 231, 231);
+}"
+btn16,"<button className=""button btn16"">Button (b16)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn16 {
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 4px;
+    background: none;
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn16:hover, .btn16:focus {
+    border: 2px solid rgb(0, 247, 255);
+    background: rgb(0, 247, 255);
+    color: rgb(231, 231, 231);
+}"
+btn17,"<button className=""button btn17"">Button (b17)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn17 {
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 4px;
+    background: none;
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn17:hover, .btn17:focus {
+    border: 2px solid rgb(251, 255, 0);
+    background: rgb(251, 255, 0);
+    color: rgb(231, 231, 231);
+}"
+btn18,"<button className=""button btn18"">Button (b18)</button>",".button {
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.btn18, .btn18:active {
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 4px;
+    background: none;
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    padding: .3rem .8rem .3rem .8rem;
+    cursor: pointer;
+}
+
+.btn18:hover, .btn18:focus {
+    border: 2px solid rgb(120, 0, 218);
+    background: rgb(120, 0, 218);
+    color: rgb(231, 231, 231);
+}"
+"segment - top","<div className=""top-segment light-grey"">
+      <h1>Segment - Top</h1>
+       
+    </div>",".top-segment {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 2%;
+}"
+"segment - middle","<div className=""middle-segment charcoal light-font"">
+      <h1>Segment - Middle</h1>
+    </div>",".middle-segment {
+    padding: 2%;
+}"
+"segment - bottom","<div className=""bottom-segment light-grey"">
+      <h1>Segment - Bottom</h1>
+    </div>",".bottom-segment {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 2%;
+}"
+"modal - login1","import React, { useState } from ""react"";
+
+function ModalLogin1() {
+  // This is a React component
+  // You must import useState for this 
+component to function
+  // Button classnames are pulled from this library
+
+  const [shown, setShown] = useState(false);
+
+  function handleOpen() {
+    setShown(true);
+  }
+
+  function handleClose() {
+    setShown(false);
+  }
+
+  return (
+    <>
+      <button className=""btn3"" onClick={handleOpen}>
+        {""Modal - Login1""}
+      </button>
+
+      {shown === true ? (
+        <div className=""overlay"" onClick={handleClose}>
+          <div className=""form-login1"">
+            <h2>Login</h2>
+            <form>
+              <input type=""text"" placeholder=""Username...""></input>
+              <input type=""text"" placeholder=""Password...""></input>
+              <input type=""submit"" className=""btn3""></input>
+            </form>
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+export default ModalLogin1;",".overlay {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.356);
+}
+
+.form-login1 {
+  background-image: url(""https://i.ibb.co/4NCGyzZ/loginform.png"");
+  background-position: right bottom;
+  background-size: cover;
+  border-radius: 8px;
+  position: relative;
+  height: 22rem;
+  width: fit-content;
+  color: rgb(0, 0, 0);
+  padding: 0 0 1.1% 0;
+  top: 5%;
+  margin: 0 auto 0 auto;
+}
+
+.form-login1 > form {
+  background: rgba(255, 255, 255, 0.603);
+  border-radius: 3px;
+  margin: 5% 2% 10% 2%;
+  padding: 5%;
+}
+
+.form-login1 > h2 {
+  padding: 1%;
+  text-align: left;
+  background: rgba(0, 195, 255, 0.301);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+"
+btn19,"<button className=""button btn19"">Gradient Button (btn19)</button>",".btn19 {
+  border-radius: 100rem;
+  font-size: 0.7rem;
+  padding: 0.5rem 2rem;
+  color: black;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 4px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(50deg, #00ff62, #7700ff);
+  background-origin: border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+}
+
+.btn19:hover {
+  box-shadow: none;
+  color: white;
+}
+
+.btn19:active {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      linear-gradient(90deg, #00ff62, #7700ff);
+}"
+btn20,"<button className=""button btn20"">Gradient Button (btn20)</button>",".btn20 {
+  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 0.5rem 3rem;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(30deg, #ff0000, #000000);
+  background-origin: border-box;
+  box-shadow: none;
+}
+
+.btn20:hover {
+  box-shadow: 2px 1000px 1px #fff inset;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(70deg, #000000, #ff0000);
+
+  color: rgb(0, 0, 0);
+}"
+btn21,"<button className=""button btn21"">Gradient Button (btn21)</button>",".btn21 {
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  padding: 0.5rem 2rem;
+  color: black;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 4px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(45deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  box-shadow: 8px 1px 100px #fff inset;
+}
+
+.btn21:hover {
+  box-shadow: none;
+  color: white;
+}"
+"modal - login2","import React, { useState } from ""react"";
+import ""./modal-login2.css"";
+
+function ModalLogin2() {
+    // This is a React component
+  // You must import useState for this component to function
+  const [shown, setShown] = useState(false);
+
+  function handleOpen() {
+    setShown(true);
+  }
+
+  function handleClose() {
+    setShown(false);
+  }
+
+  function randomButton(min, max) {
+    const random = Math.floor(Math.random() * (max - min + 1) + min);
+    return `btn${random}`;
+  }
+
+  return (
+    <>
+      <button className={`${randomButton(3, 21)} small-margin`} onClick={handleOpen}>
+        {""Modal - Login2""}
+      </button>
+
+      {shown === true ? (
+        <div className=""overlay"" onClick={handleClose}>
+          <div className=""form-login2"">
+            <h2>Login</h2>
+            <form>
+              <input type=""text"" placeholder=""Username...""></input>
+              <input type=""text"" placeholder=""Password...""></input>
+              <input type=""submit"" className=""btn19""></input>
+            </form>
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+export default ModalLogin2;",".overlay {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.356);
+  }
+  
+  .form-login2 {
+    background-image: url(""https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg"");
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    position: absolute;
+    height: 19rem;
+    width: 20rem;
+    color: rgb(0, 0, 0);
+    padding: 0 0 1.1% 0;
+    top: 5%;
+    right: 5%;
+    margin: 0 auto 0 auto;
+  }
+  
+  .form-login2 > form {
+    background: rgba(255, 255, 255, 0.603);
+    border-radius: 3px;
+    margin: 39.5% 2% 0 2%;
+    padding: 5%;
+  }
+  
+  .form-login2 > h2 {
+    padding: 1%;
+    padding-right: 3rem;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(209, 209, 209);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  "
+"modal - simple","import React, { useState } from ""react"";
+import ""./modal-simple.css"";
+
+function ModalSimple() {
+  const [shown, setShown] = useState(false);
+
+  function handleOpen() {
+    setShown(true);
+  }
+
+  function handleClose() {
+    setShown(false);
+  }
+
+  function randomButton(min, max) {
+    const random = Math.floor(Math.random() * (max - min + 1) + min);
+    return `btn${random}`;
+  }
+
+  return (
+    <>
+      <button className={`${randomButton(3, 21)} small-margin`} onClick={handleOpen}>
+        {""Modal - Simple""}
+      </button>
+
+      {shown === true ? (
+        <div className=""overlay"">
+          <div className=""simple-modal segment"">
+            <header>
+              <button className=""btn15"" onClick={handleClose}>
+                X
+              </button>
+            </header>
+            <hr />
+            <h1>
+              Place Content Here
+              <br />
+              Place Content Here
+              <br />
+              Place Content Here
+              <br />
+              Place Content Here
+              <br />
+              Place Content Here
+              <br />
+              Place Content Here
+              <br />
+            </h1>
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+export default ModalSimple;",".simple-modal > header {
+    text-align: right;
+}
+
+.overlay {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.356);
+}
+
+.simple-modal {
+  position: relative;
+  max-width: 90%;
+  max-height: 70%;
+  background: white;
+  color: rgb(0, 0, 0);
+  padding: 2%;
+  top: 5%;
+  margin: auto;
+  word-wrap: break-word;
+  overflow: auto;
+}
+"
+"form - simple","import React from ""react"";
+import ""./form-simple.css""
+
+function FormSimple() {
+  function handleChange(e) {
+    e.preventDefault();
+  }
+
+  return (
+    <div className=""form-simple"">
+      <form onSubmit={handleChange}>
+        <input
+          type=""text""
+          className=""form-input""
+          placeholder=""Username""
+        ></input>
+        <br />
+        <input
+          type=""text""
+          className=""form-input""
+          placeholder=""Password""
+        ></input>
+        <br />
+        <input type=""text"" className=""form-input"" placeholder=""Email""></input>
+        <br />
+        <input type=""text"" className=""form-input"" placeholder=""Phone""></input>
+        <br />
+        <input
+          type=""text""
+          className=""form-input""
+          placeholder=""Whatever You Want""
+        ></input>
+        <br />
+        <input type=""submit"" className=""btn6""></input>
+        <br />
+      </form>
+    </div>
+  );
+}
+
+export default FormSimple;",".form-simple {
+    background: rgb(228, 228, 228);
+    border-radius: 8px;
+    padding: 2%;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}"
+"form - login1","import React from ""react"";
+import ""./form-login1.css""
+
+function FormLogin1() {
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
+  return (
+    <div className=""form-login1"">
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <input type=""text"" placeholder=""Username...""></input>
+        <input type=""text"" placeholder=""Password...""></input>
+        <input type=""submit"" className=""btn4""></input>
+      </form>
+    </div>
+  );
+}
+
+export default FormLogin1;
+",".form-login1 {
+    background-image: url(""https://i.ibb.co/4NCGyzZ/loginform.png"");
+    background-position: right bottom;
+    background-size: cover;
+    border-radius: 8px;
+    height: 22rem;
+    width: fit-content;
+    color: rgb(0, 0, 0);
+    padding: 0 0 1.1% 0;
+    margin: 0 auto 0 auto;
+  }
+  
+  .form-login1 > form {
+    background: rgba(255, 255, 255, 0.603);
+    border-radius: 3px;
+    margin: 5% 2% 10% 2%;
+    padding: 5%;
+  }
+  
+  .form-login1 > h2 {
+    padding: 1%;
+    text-align: left;
+    background: rgba(0, 195, 255, 0.301);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  "
+"form - login2","import React from ""react"";
+import ""./form-login2.css""
+
+function FormLogin2() {
+  return (
+    <div className=""form-login2"">
+      <h2>Login</h2>
+      <form>
+        <input type=""text"" placeholder=""Username...""></input>
+        <input type=""text"" placeholder=""Password...""></input>
+        <input type=""submit"" className=""btn19""></input>
+      </form>
+    </div>
+  );
+}
+
+export default FormLogin2;
+",".form-login2 {
+    background-image: url(""https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg"");
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    height: 19rem;
+    width: 20rem;
+    color: rgb(0, 0, 0);
+    padding: 0 0 1.1% 0;
+    margin: 0 auto 0 auto;
+  }
+  
+  .form-login2 > form {
+    background: rgba(255, 255, 255, 0.603);
+    border-radius: 3px;
+    margin: 39.5% 2% 0 2%;
+    padding: 5%;
+  }
+  
+  .form-login2 > h2 {
+    padding: 1%;
+    padding-right: 3rem;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(209, 209, 209);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }"
