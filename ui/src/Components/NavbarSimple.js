@@ -74,7 +74,7 @@ function SimpleNavbar({ user, setUser }) {
         </div>
         <div className="logo">
           <Link to="/" className="logo-text">
-            My React/CSS Library
+            Simple<b>Styles</b>
           </Link>
         </div>
       </div>

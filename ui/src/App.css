@@ -17,6 +17,10 @@ footer {
   background: rgba(255, 255, 255, 0.356);
 }
 
+footer .f1 {
+float: left;
+}
+
 hr {
   border: none;
   border-top: 1px solid rgb(65, 65, 65);

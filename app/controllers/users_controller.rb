@@ -18,11 +18,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    puts params
-    puts ""
-    puts user_update_params
       current_user = User.find_by(id:session[:user_id])
-      puts current_user
       current_user.update!(user_update_params)
       render json: current_user
   end
