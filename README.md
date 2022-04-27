@@ -1,3 +1,5 @@
+![Demo GIF](./simplestylesgif.gif)
+
 ## Overview
 
 The **SimpleStyles** app was created in order to exercise my ability to recreate components from Semantic UI, ReactBootstrap, and a few other sites just to see if I can do it. I've found that opting to not use these outside components has actually saved me a lot of time and hassle in the past, so I'm looking forward to having a repo set aside for myself that has unbroken code that wasn't written in 2018. No promises that I'm going to wow you, but I hope that what I'm able to produce is helpful to someone, someday.
@@ -21,6 +23,7 @@ HTML5<br>
 CSS
 
 ## Setup
+
 #### Front End
 
 cd recreating-react-components-from-scratch/ui<br>
