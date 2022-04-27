@@ -7,7 +7,7 @@ function Home() {
       <h1>
         Welcome to Simple<i>Styles</i>
       </h1>
-      We provide prebuild, user friendly React components to ease developer workflow
+      We provide prebuilt, user friendly React components to ease developer workflow
       when building React apps. It allows for the easy search and use of common
       React components, saving significant development time.
     </div>
