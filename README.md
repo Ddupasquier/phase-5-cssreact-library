@@ -10,24 +10,33 @@ The **SimpleStyles** app was created in order to exercise my ability to recreate
 
 ## Login Credentials
 
-Email: test@gmail.com Password: test123
+Email: test@gmail.com 
+
+Password: test123
 
 ## Tech Stack
 
 React
+
 Ruby on Rails
+
 HTML5
+
 CSS
 
 ## Setup
 #### Front End
 
 cd recreating-react-components-from-scratch/ui
+
 To install the dependencies run 'npm install'
+
 Then run 'npm start' to run the front end at 'localhost:4000'
 
 #### Back End
 
 cd recreating-react-components-from-scratch/app
+
 To install dependencies run 'bundle i' in your terminal
+
 Then run 'rails s'
