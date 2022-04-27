@@ -71,7 +71,7 @@ function FormsModal({ allComps, user, userFav, setUserFav }) {
             </>
           )}
           <h2>{b.name}</h2>
-          <b>HTML:</b>
+          <b>HTML/JSX:</b>
           <br />
           {b.html.split("\n").map((v, i) => {
             return (
