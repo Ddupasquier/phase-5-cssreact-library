@@ -25,7 +25,7 @@ function SimpleNavbar({ user, setUser }) {
   }, []);
 
   function handleMenuHide() {
-    isOpen === false ? setIsOpen(true) : setIsOpen(false);
+    !isOpen ? setIsOpen(true) : setIsOpen(false);
   }
 
   // function nameOrId() {
